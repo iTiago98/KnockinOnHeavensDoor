@@ -1,0 +1,10 @@
+/$/Player|Un momento, ¿está hablando de empresas tapadera? No será usted uno de esos Elliot Ness del siglo 21, un defensor de los presupuestos y el orden, ¿verdad?
+	/$$/Fulgencio|No me haga reír. ¡Lo único que defiendo yo es que no me roben!
+		/$$$/Option|¿Que no le roben a punta de pistola? ¿Le han pegado mucho en su vida?
+			/$$$$/Fulgencio|Ya me pegaron lo suficiente en el colegio para aprender a pasar 	desapercibido. Me llamaban Fullencio Folleles, y se reían de mis orejas de soplillo.
+				/$$$$$/Player|Entonces si ya ha aprendido a defenderse, ¿quién le roba ahora?
+					/$$$$$$/Fulgencio|Ya vive demasiada gente en Andorra y defraudan demasiado mis impuestos en tonterías los gobiernos de turno como para no vigilar el dinero.
+						/$$$$$$$/Fulgencio|Precisamente el último caso que me ocupaba tenía que ver con unas subvenciones fraudulentas en recursos, por lo que parece, demasiado humanos. 
+		/$$$/Option|¿Pero quién va a robar un presupuesto?
+			/$$$$/Fulgencio|Ya vive demasiada gente en Andorra y defraudan demasiado mis impuestos en tonterías los gobiernos de turno como para no vigilar el dinero.@3
+				/$$$$$/Fulgencio|Precisamente el último caso que me ocupaba tenía que ver con unas subvenciones fraudulentas en recursos, por lo que parece, demasiado humanos. 

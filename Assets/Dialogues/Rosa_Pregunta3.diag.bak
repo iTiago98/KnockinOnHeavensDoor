@@ -1,0 +1,56 @@
+/$/Player|Si es un ídolo en España, ¿por qué suicidarse? 
+    /$$/Rosa|¿Cuántas veces tengo que decir que no me suicidé? ¡Si no bebo desde hace años! Además sospecho que alguien ha conspirado contra mí.
+        /$$$/Option|¿Contra usted?
+            /$$$$/Rosa|Me he granjeado algunos enemigos poderosos por siempre decir la verdad. Y ahora puede que sean demasiado poderosos.
+                /$$$$$/Option|¿Qué clase de enemigos?
+                    /$$$$$$/Rosa|Sobre todo gente de las altas esferas, últimamente demasiado altas, no sé si me entiende.
+                /$$$$$/Option|Decir la verdad nunca ha sido un pecado.
+                    /$$$$$$/Rosa|Jajajaja, ¿Y Galileo, y Newton, y Darwin? ¡La Iglesia ha sido el mayor enemigo de la verdad durante milenios!
+                /$$$$$/Option|Puede que sea usted también demasiado ilusa por decir siempre la verdad.
+                    /$$$$$$/Rosa|No lo sabe usted bien, siempre han intentado silenciarme por ello.
+        /$$$/Option|Pongamos que no se suicidara, ¿cómo explica que muriera sola en su casa?
+            /$$$$/Rosa|¡Pero bueno! Deberían saberlo ustedes, que lo saben todo.
+                /$$$$$/Option|Y lo sabemos, se suicidó por beber demasiado.
+                    /$$$$$$/Rosa|Esto es como discutir con una pared.
+                /$$$$$/Option|¿No vio a nadie en sus últimos días?
+                    /$$$$$$/Rosa|A nadie, todo me llegaba por mensajería, incluso la compra.
+                        /$$$$$$/Option|Quedémonos ahí un momento y analicemos eso. ¿Le llegó alguna vez algo por error?
+                            /$$$$$$$/Rosa|Nada, me vino todo lo que pedí, nada más. Todo venía en bolsas al vacío y desinfectadas. Perdí la cuenta de los repartidores. Ya no sabía quién era el mensajero del mensajero del mensajero.
+                                /$$$$$$$$/Option|Vaya, parece un poco extremo, ¿no?
+                                    /$$$$$$$$$/Rosa|¿Dónde ha estado usted en estos tres últimos años?
+                                        /$$$$$$$$$$/Option|¿Con qué estaban desinfectadas las bolsas?
+                                            /$$$$$$$$$$$/Rosa|Con qué va a ser, con gel hidroalcohólico.
+                                                /$$$$$$$$$$$$/Player|Vaya, el alcohol sale otra vez en la ecuación.
+                                                    /$$$$$$$$$$$$$/Rosa|¿Cree que estoy tan desesperada como las presas de la cárcel esa? Le repito que llevo años sin beber.
+                                                        /$$$$$$$$$$$$/Player|Sí pero hay más manera de ingerir alcohol, incluso por vía cutánea.
+                                                            /$$$$$$$$$$$$$$$/Rosa|El caso es que lo último que recuerdo antes de aparecer aquí fue como si se me durmiera el brazo. Estaba cogiendo las bolsas de la compra y empecé a notar un picor en la mano…
+                                        /$$$$$$$$$$/Option|Pues aquí, de hecho oficialmente me contrataron como apoyo covid.
+                        /$$$$$$/Option|¿Y qué pidió exactamente?
+                            /$$$$$$$/Rosa|Pues lo normal, artículos de alimentación, de higiene y de limpieza.
+                        /$$$$$$/Option|¿Ni siquiera más de lo que pidió? ¿Algún artículo de más?
+                            /$$$$$$$/Rosa|Imposible, yo siempre compro 21 artículos de cada cosa. Desde hace años, cuando me hice nómada y viajé con mi caravana por todo el mundo.
+                                /$$$$$$$$/Player|¿Y de dónde sacó esa tontería?
+                                    /$$$$$$$$$/Rosa|De un chamán de los pantanos colgantes de Mesopotamia. Jofrén Raumah un gurú de pelo afro que me demostró que siempre necesitamos esa cantidad exacta en nuestra vida.
+        /$$$/Option|¿Cuánto hace que dejó la bebida?
+            /$$$$/Rosa|Pues hará ya 30 años mínimo. Cuando me dieron el programa del telecupón.
+                /$$$$$/Option|¿Y todas esas fotos suyas de las revistas del corazón entrando a las clínicas de rehabilitación?
+                    /$$$$$$/Rosa|Iba a ver a mi hijo Arturito. El pobre nunca superó su adicción a las pastillas para la tos. La codeína acabó con su futuro.
+                        /$$$$$$$/Player|Será una broma…
+                            /$$$$$$$$/Rosa|Ojalá, pero estaba muy aferrado a su padre, pese a que nunca lo reconoció. 
+                                /$$$$$$$$$/Player|¿Y eso?
+                                    /$$$$$$$$$$/Rosa|Estaba ilusionado con que un día lo reconocería como hijo propio, y en su peor etapa preadolescente su padre salía en un anuncio de Pastillas Juanola donde sorteaban una cena con él.
+                                        /$$$$$$$$$$$/Player|Continúe.
+                                            /$$$$$$$$$$$$/Rosa|Pues que no paró de tomar juanolas durante meses, compraba palés y palés de juanolas. Acabó obsesionado con tener un aliento fresco. 
+                                                /$$$$$$$$$$$$$/Player|¿Qué tiene que ver eso con la droga?
+                                                    /$$$$$$$$$$$$$$/Rosa|Pues que su aliento nunca era suficientemente fresco para él. De las juanolas pasó al Licor del Polo, de ahí a las pastillas del Dr. Andreu, luego pasó a la Lizipaína, al Angileptol y a los Strepsils. ¡Una pesadilla!
+                /$$$$$/Option|Parece que el telecupón le ayudó mucho.
+                    /$$$$$$/Rosa|La verdad es que me dio la vida.
+                        /$$$$$$/Option|¿En qué sentido?
+                            /$$$$$$$/Rosa|Pensaba que la gente me había olvidado, hacía años que no sentía el cariño de la gente.
+                        /$$$$$$/Option|¿Tanto como eso?
+                            /$$$$$$$/Rosa|Dejé por fin la bebida y volví a reconducir mi carrera. Fue como el ave fénix.
+
+                        /$$$$$$/Option|La verdad es que a mi abuela le encantaba su programa.
+                            /$$$$$$$/Rosa|Ese era el objetivo del programa. La gente mayor siempre está atenta a la lotería, por lo que nos centramos en ese target.
+                /$$$$$/Option|¿Tantos años lleva sin beber? Es todo un logro, la verdad.
+                    /$$$$$$/Rosa|Ni una sola gota, acabé siendo Madrina de Honor de Alcohólicos anónimos.

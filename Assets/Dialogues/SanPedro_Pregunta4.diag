@@ -1,0 +1,47 @@
+/$/Player|Es usted famoso por muchas cosas, siendo su último destino uno de sus oficios más conocidos: el guardián de las Puertas del Cielo.
+	/$$/San Pedro|Hombre creo que me gané ese cargo a pulso, nadie se tomó más en serio el legado del Yisas que yo.
+		/$$$/Option|¿El Yisas?
+			/$$$$/San Pedro|Chacho mi colega Cristo Jesús. Ya sabes, el Mesías antes de Messi. El chaval de la otra mejilla. Era un fuera de serie.
+				/$$$$$/Player|En qué sentido, ¿sus milagros? ¿Sus enseñanzas?
+					/$$$$$$/San Pedro|A ver el tío era bastante jipioso, las cosas como son, pero tenía un piquito de oro. 
+						/$$$$$$$/Player|Sus parábolas fueron bastante alabadas durante siglos.
+							/$$$$$$$$/San Pedro|Eso eran tonterías comparado con su capacidad de convencer a la gente. Me acuerdo una vez que fuimos a buscar setas, y a la vuelta nos cruzamos con una boda de unos tiesos, se les había acabado la comida y lo que es peor, ¡la priva!
+								/$$$$$$$$$/San Pedro|Pues el tío va y les convence de que no solo no les faltaba papeo y bebercio, ¡sino que tenían tres o cuatro veces más! Los muertos de hambre lo primero que hicieron fue comerse nuestras cestas de setas. Malditos jipis…
+		/$$$/Option|Quizá demasiado en serio. La iglesia no es conocida por su flexibilidad ni tolerancia.
+			/$$$$/San Pedro|¿Tolerantes con quién? ¿Con jipiosos, pervertidos y depravados? Primero que se peinen y luego que vengan limpitos a la parroquia. No pasa nada si le pegan un poquito a la lejía antes de salir con lamparones de la chabola.
+				/$$$$$/Player|¿Qué me dice de los creyentes de otras religiones?
+					/$$$$$$/San Pedro|Mira aquí nos llevamos los moros y los cristianos, ¡de puta madre! Somos todos igual de sinvergüenzas.
+		/$$$/Option|¿Cómo calificaría su manera de valorar a la gente que ha ido pasando por sus puertas?
+			/$$$$/San Pedro|Pues de cinco estrellas, chaval. Yo si peco de algo es de ser justo. Al pan, pan y al vino, vino.
+				/$$$$$/Player|Si tan contento está con su gestión, ¿por qué nos ha contratado?
+					/$$$$$$/San Pedro|Porque yo no puedo hacerlo todo, crack. Tú no sabes la de curro que tengo, figura.
+						/$$$$$$$/Option|Una pregunta que no viene al caso, ¿a qué viene tanto adjetivo para referirse a mí? ¿Es que no sabe cómo me llamo?
+							/$$$$$$$$/San Pedro|Mira nene, a mí no me vaciles, que yo lo sé todo. Tú te llamas Gumersindo desde que te parieron.
+								/$$$$$$$$$/Player|Lo siento, pero se equivoca de persona.
+									/$$$$$$$$$$/San Pedro|Ah, no. Si tú eres Anselmo el de la Gertrudis, que tu madre nos pidió el favor de que te colocáramos porque te estabas eslomando de hacer chapús con tu cuñao.
+										/$$$$$$$$$$$/Player|Le ruego deje de ponerse en evidencia y reconozca que no sabe quién soy.
+											/$$$$$$$$$$$$/San Pedro|Lo que tú digas, campeón.
+						/$$$$$$$/Option|Que yo sepa, este es su último destino, su jubilación por así decirlo.
+							/$$$$$$$$/San Pedro|Jubilao lo será tu padre, cuidado con lo que dices que te arreo una hostia que te quedas haciendo palmas.
+								/$$$$$$$$$/Player|Permítame expresarlo de otra manera. Le han dado a usted un hobby en la mejor residencia de ancianos del mundo.
+									/$$$$$$$$$$/San Pedro|La verdad es que siempre se me ha dado bien calar a la gente. por eso monté el chiringuito de la iglesia. Así podíamos calificar a la gente y adoctrinarlos como nos pareciera. 
+										/$$$$$$$$$$$/Player|¿Así de fácil?
+											/$$$$$$$$$$$$/San Pedro|Usamos la figura de Chechu como reclamo. Lo pusimos rubio con ojos azules, ¡a un judío medio negro de Oriente Medio! La verdad es que la gente se cree cualquier cosa.
+						/$$$$$$$/Option|¿Qué otras cosas tiene que hacer? ¿Le queda algo más en el tintero? Si ha hecho de todo.
+							/$$$$$$$$/San Pedro|Digamos que quiero expandir el negocio. 
+								/$$$$$$$$$/Player|¿Expandir el cielo infinito? Usted chochea.
+									/$$$$$$$$$$/San Pedro|El que chochea eres tú, carapán. Aquí se puede mejorar mucho, que hay mucho vago suelto que se duerme en los pinreles de uñas largas.
+										/$$$$$$$$$$$/Option|¿Uñas largas? Todo el mundo sabe que en el cielo se te cortan las uñas solas cada ciclo lunar.
+											/$$$$$$$$$$$$/San Pedro|Me refiero a los primos demócratas.
+												/$$$$$$$$$$$$$/Player|¿Qué tiene que ver la democracia con El Paraíso?
+													/$$$$$$$$$$$$$$/San Pedro|Aquí no tenemos esos sistemas de tres al cuarto inventados por los humanos. Donde se ponga un caudillo como Dios manda que se quiten las tonterías.
+														/$$$$$$$$$$$$$$$/Player|Entonces, ¿quiénes son los dichosos demócratas que dice?
+															/$$$$$$$$$$$$$$$$/San Pedro|Así llamamos a nuestros primos los demonios. Si en este pueblo nos conocemos todos. ¿No sabía que Satán era un ángel caído?
+																/$$$$$$$$$$$$$$$$$/San Pedro|Y los ángeles son sobrinos de Dios, por lo que los demonios, siendo descendencia del mismísimo Diablo, son nuestros primos.
+																	/$$$$$$$$$$$$$$$$$$/Player|Un momento, ¿me está diciendo que quiere quedarse también con el trabajo del Infierno?
+																		/$$$$$$$$$$$$$$$$$$$/San Pedro|Madre mía, ¿ahora lo pillas? ¡Que no te enteras, Contreras! Jajota, jajota. Por qué te crees que pillé una subcontrata, ¿para hacer el trabajo que tanto me gusta?
+																			/$$$$$$$$$$$$$$$$$$$$/San Pedro|Estoy ampliando el mercado, si todo sale bien, me darán la franquicia del Infierno viendo el pollo que habéis montado allí con todo el papeleo que he montado.
+										/$$$$$$$$$$$/Option|Hombre, tengo entendido que esa es una forma de pasar la eternidad aquí.
+											/$$$$$$$$$$$$/San Pedro|Por supuesto, todo el que entra en el cielo tiene su descanso merecido.
+										/$$$$$$$$$$$/Option|¿Mejorar el cielo? No estará reconociendo la imperfección del Paraíso…
+											/$$$$$$$$$$$$/San Pedro|A mi casa ni se te ocurra llamarla imperfecta, ¡que te meto un sopapo que te vas calentico pabajo!

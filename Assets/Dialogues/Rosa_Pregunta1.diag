@@ -1,0 +1,26 @@
+/$/Player|Parece que ha sido una vida bastante tumultuosa. ¿Qué tiene que decir sobre los múltiples rumores de su persona?
+    /$$/Rosa|Pues qué quiere que le diga, que son rumores, la mayoría son mentira y las que más se acercan a la verdad, son meras exageraciones.
+        /$$$/Player|¿Siempre ha sido su vida tan pública?
+            /$$$$/Rosa|Pues en mis inicios no era para tanto, mis primeros discos y musicales tuvieron bastante éxito y la verdad es que la prensa me trataba con mucho respeto.
+                /$$$$$/Option|Entonces, ¿piensa que hay un origen con los escándalos?
+                    /$$$$$$/Rosa|No sé, la verdad es que mis problemas empezaron cuando fui a aquella cacería. Yo la verdad es que no sabía ni a dónde íbamos, fue idea del subnormal de siempre ir allí.
+                        /$$$$$$$/Option|Ese subnormal quién es, ¿su marido?
+                            /$$$$$$$$/Rosa|Qué más quisiera yo, nunca quiso casarse conmigo.
+                                /$$$$$$$$$/Player|Su amante, entonces.
+                                    /$$$$$$$$$$/Rosa|Con los años me acabé dando cuenta de que nunca me amó, ni siquiera al dejarme embarazada. Yo lo hice todo por él, estaba cegada por mis sentimientos. Él sólo se quería a sí mismo, siempre estaba mirando sus propias películas.
+ 	                                    /$$$$$$$$$$$/Player|Él podría ser el culpable de sus problemas con los medios, entonces.
+                                            /$$$$$$$$$$$$/Rosa|El muy cabrón nunca hizo nada por mí. De hecho, acabó hundiéndome sólo por el único error que tuve en mi vida: quererle.
+                        /$$$$$$$/Option|¿No era usted animalista?
+                            /$$$$$$$$/Rosa|¡Pues claro que lo soy! Yo tengo mi granja con mis ovejitas. Esa fue la única cacería que he ido en mi vida.
+                        /$$$$$$$/Option|¿Qué clase de cacería?
+                            /$$$$$$$$/Rosa|Pues no sé la verdad, nosotros fuimos a la fiesta de después, a mi novio no le gustaba cazar. 
+                                /$$$$$$$$$/Player|¿Por qué no?
+                                    /$$$$$$$$$$/Player|Le daban miedo las armas, en sus películas las pistolas tenía que traerlas él por contrato. Se las compraba yo en los chinos.
+                                /$$$$$$$$$/Player|Si no le gustaba cazar, ¿por qué se empeñó en ir a esa cacería?
+                                    /$$$$$$$$$/Rosa|Dijo que había gente muy importante, que le vendría bien a mi carrera. Yo me creía todo lo que me dijera, era demasiado inocente en esa época.
+                /$$$$$/Option|Puede ser que la fama acabara por subírsele a la cabeza…
+                    /$$$$$$/Rosa|En ningún momento, yo siempre he sido una profesional que se lo ha currado más que nadie, por eso soy tan querida.
+                /$$$$$/Option|Al pasar su carrera al cine, puede que se sintiera más expuesta a los medios.
+                    /$$$$$$/Rosa|No es el caso, yo llevaba ya unas cuantas películas cuando empezaron los escándalos.
+                        /$$$$$$/Player|Tal vez al parecer siempre tan cercana, la gente empezara a hablar más de usted.
+                            /$$$$$$/Rosa|Para nada, siempre he estado muy cerca de mi gente y de todo aquél que se acercaba.

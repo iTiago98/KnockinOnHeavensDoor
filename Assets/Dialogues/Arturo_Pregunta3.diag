@@ -1,0 +1,13 @@
+/$/Player|Háblenos de su relación con la iglesia, parece llevarse muy bien con San Pedro.
+	/$$/Arturo|¡Hombre, Pedrín! Es amigo de la familia, los Nerfández siempre hemos sido muy de San Pedro. Mi abuelo por parte de madre era pescador, y siempre llevaba una medallita suya que me regaló cuando se jubiló. 
+		/$$$/Player|Bueno parece que es algo más que el patrón de los pescadores para usted.
+			/$$$$/Arturo|Un par de años más tarde lo conocí personalmente en un viaje astral que hice en una fiesta en Torremolinos. Majísimo, oye. Campechano y muy natural.@1
+				/$$$$$/Option|Será una broma, ¿no?
+					/$$$$$$/Arturo|Para nada, era una ayahuasca de la hostia. Algunos dicen que me dio un coma y que estuve a punto de ahogarme en mi propio vómito, pero esos son unos envidiosos.
+				/$$$$$/Option|¿Y qué tal la experiencia?
+					/$$$$$$/Arturo|Pues casualmente fue poco antes de fundar la asociación. Lo vi como el tío más guay de la historia, una especie de surfero paleocristiano del siglo primero.
+				/$$$$$/Option|¿De qué hablaron?
+					/$$$$$$/Arturo|Pues yo estaba bastante a mi rollo, intentando olvidarme de los problemas para disfrutar del ciego.
+						/$$$$$$$/Player|¿Qué problemas tenía?
+							/$$$$$$$$/Arturo|Nada serio, querían endosarme a un niño, lo típico. Y San Pedro me contó la historia de un colega suyo que le endosaron a un padre adoptivo por la cara, ya sabes, la historia más vieja del mundo.
+

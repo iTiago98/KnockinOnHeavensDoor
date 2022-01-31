@@ -1,0 +1,6 @@
+/$/Player|A ver, hábleme de sus relaciones, ¿qué tal con su familia? ¿Cuántos buenos amigos diría que tiene? ¿Y parejas, ha sido fiel?
+	/$$/Fulgencio|¡¿Relaciones!? ¿Quién tiene tiempo para eso cuando tienes que labrarte un futuro? 
+		/$$$/Option|¿No quiere compartir ese futuro con nadie?
+			/$$$$/Nadie se merece mi atención, este mundo está lleno de hijos de ****.
+		/$$$/Option|Bueno algún pariente tendrá...
+			/$$$$/Tengo una tía abuela que me manda un christmas cada año que tengo que pagar contra reembolso, así que mejor estar solo. 

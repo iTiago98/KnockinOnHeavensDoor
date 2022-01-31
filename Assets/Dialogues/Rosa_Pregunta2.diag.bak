@@ -1,0 +1,31 @@
+/$/Player|Ha reconocido abiertamente su alcoholismo, ¿tuvo otros excesos?
+    /$$/Rosa|Vamos a ver, tuve que reconocerlo cuando intenté poner fin a todos los rumores que me atosigaban desde hacía años. Yo siempre he dicho la verdad, y no me importa reconocerlo.
+        /$$$/Player|Pero entonces puede considerarse un suicidio, ya que murió por intoxicación etílica.
+            /$$$$/Rosa|¿Suicidio? Me está insultando como borracha con décadas de experiencia.
+                /$$$$$/Option|Si encontraron su cadáver rodeado de botellas de Marie Brizard, su marca favorita.
+                    /$$$$$$/Rosa|No ha entrado una botella en mi casa desde que superé mi alcoholismo hace años.
+                /$$$$$/Option|Oficialmente sale como suicidio, un caso directo al infierno sin juicio previo. Por eso me extraña que esté usted aquí.
+                    /$$$$$$/Rosa|Veo que es usted nuevo en la oficina. Aquí las reglas son más flexibles de lo que parece.
+                        /$$$$$$/Option|Perdone, ¿cómo dice? ¿Qué sabe usted de esta oficina?
+                            /$$$$$$$/Rosa|Digamos que he hecho mis pinitos en La Administración.
+                                /$$$$$$$$/Option|¿Se refiere a La Administración con mayúsculas? ¿La AGE?
+                                    /$$$$$$$$$/Rosa|¿La Administración General del Estado? Jajajaja, pero qué iluso puede ser usted…
+                                /$$$$$$$$/Option|¿Sus pinitos? ¿De qué está hablando?
+                                    /$$$$$$$$$/Rosa|He echado una mano en la oficina desde hace un tiempo.
+                                        /$$$$$$$$$$/Player|¿Cómo dice?
+                                            /$$$$$$$$$$$/Rosa|Pues que he estado facilitándole el trabajo. ¿Acaso se cree que está usted solo en esto?
+                                                /$$$$$$$$$$$$/Player|La verdad es que ignoro lo que hay más allá de esas puertas.
+                                                    /$$$$$$$$$$$$$/Rosa|Pues somos mucha gente en la oficina, cariño. Hay muchos departamentos para el control de las puertas del cielo, y puede que a partir de ahora del infierno también.
+                                                        /$$$$$$$$$$$$$$/Player|Deje de desviarse del tema.
+                                                            /$$$$$$$$$$$$$$/Rosa|Usted manda…
+                                /$$$$$$$$/Option|Le ruego que se ciña a esta entrevista. No está la cosa para bromas.
+                        /$$$$$$/Option|Perdone pero es imposible que sepa nada de mí ni de mi trabajo.
+                            /$$$$$$$/Rosa|Se sorprendería de lo que sé.
+                                /$$$$$$$$/Player|¡Está desvariando! 
+                                    /$$$$$$$$$/Rosa|Es usted el que desvaría, ¡desvaría este sistema!
+                                        /$$$$$$$$$$/Player|¿Cómo?
+                                            /$$$$$$$$$$$/Rosa|Te diré la verdad. ¡Tú no sabes afrontar la verdad!
+                                                /$$$$$$$$$$$$/Player|¿Perdone?
+                                                    /$$$$$$$$$$$$$/Rosa|¡Cuando veas tu mano manchada de mocos, en lo que era antes la cara de tu amigo…!
+                                                        /$$$$$$$$$$$$$$/Player|Haga el favor de tranquilizarse, esto no es Chinatown.
+                        /$$$$$$/Option|Por favor, déjese de tonterías. Aquí las preguntas las hago yo.

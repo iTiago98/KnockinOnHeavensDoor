@@ -1,0 +1,10 @@
+/$/Fulgencio|Buenas tardes, creo que me he equivocado de piso, ¿esta no es la planta de economía y finanzas?
+	/$$/Player|Siento comunicarle que ha muerto, esto es el purgatorio y estamos aquí para decidir sobre su futuro. Lo siento, no era mi intención, ya no tiene futuro, claro. Perdone, es mi primer día en la oficina. Digamos que esto es una entrevista de trabajo... pero sobre su alma. Le llevaremos al cielo o al infierno según la vida que haya tenido, las buenas obras que haya hecho o no.
+		/$$$/Fulgencio|¡¿Pero qué me dice usted?! ¿Qué clase de broma es ésta? ¡Si yo tenía que llevar estos presupuestos a los de finanzas! Resulta que no tienen ningún sentido, algún chapuzas ofimático habrá metido sus zarpas, porque se les ha olvidado poner a los empleados de las empresas a los que van dirigidas estas subvenciones.
+			/$$$$/Player|Olvídese de los números, hábleme de su vida.
+				/$$$$$/Option|Opción 1
+					/$$$$$$/Fulgencio|vava
+				/$$$$$/Option|Opción 2
+					/$$$$$$/Fulgencio|perfeperfe
+				/$$$$$/Option|Opción 3
+					/$$$$$$/Fulgencio|delocosdelocos

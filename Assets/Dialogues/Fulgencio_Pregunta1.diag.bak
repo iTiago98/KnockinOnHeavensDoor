@@ -1,0 +1,10 @@
+/$/Player|Por ejemplo, ¿qué cosas buenas ha hecho últimamente? ¿Ha donado sangre o algún órgano? ¿Separa la basura para reciclar? ¿Ayuda a su casera anciana a bajar la basura?
+	/$$/Fulgencio|Pues, no sé, déjeme pensar... La verdad es que he tenido una vida difícil, soy huérfano de nacimiento y todo lo he tenido que hacer por mí mismo. 
+		/$$$/Option|Ah, ¿sí? ¿ha trabajado mucho o qué?
+			/$$$$/Fulgencio|Pues para pagarme la universidad estuve de hombre acolchado en un albergue de perros rabiosos.
+				/$$$$$/Option|Bueno, todos hemos tenido trabajos desagradables antes del que soñábamos.
+					/$$$$$$/Fulgencio|No sé yo, luego fui cobaya humana en un laboratorio de estudio de enfermedades venéreas para pagarme el máster. 
+				/$$$$$/Option|Pero al final consiguió el trabajo deseado, ser contable.
+					/$$$$$$/Fulgencio|Eso es lo de menos, lo que quiero es ordenar. Quiero decir, ordenar  el dinero de este mundo, que todo el mundo tenga el dinero que se merece y que nadie defraude. Si hay algo que odio es la gente que defrauda a hacienda, ¡malditos andorranos! ¡Y malditas empresas pantalla, malditas subcontratas que solo sirven para marearnos!
+		/$$$/Option|No me venga con tonterías, todos tenemos problemas.
+			/$$$$/Fulgencio|Creo que he tenido que luchar mucho por hacerme un hueco en este mundo, la verdad.

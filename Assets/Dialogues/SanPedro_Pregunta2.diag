@@ -1,0 +1,11 @@
+/$/Player|En las pocas entrevistas que llevo se le ha asociado en numerosas ocasiones con la tenebrosa figura del dictador Franco. ¿Qué responde a eso?
+	/$$/San Pedro|Me alegra que me haga esa pregunta, ¡porque yo lo puse donde se merecía! ¡Por fin un dictador de orden, un dictador católico, apostólico y romano! 
+		/$$$/Option|Explíquese.
+			/$$$$/San Pedro|Yo conseguí reunir la poca valentía que tuvo en su vida para hacer el único movimiento osado que hizo, dejarse de ambigüedades y apoyar por fin la sublevación.
+				/$$$$$/Player|Siempre se dijo que era muy prudente.
+					/$$$$$$/San Pedro|¿Prudente? Si nunca tuvo huevos, ¿no ves que solo tenía uno? Pero por mis huevos que ese cobardica iba a llegar lejos.
+						/$$$$$$$/San Pedro|Ya lo intenté con Hitler y Napoleón al enterarme que los monórquidos eran especiales. Pero esos jodid*s unihuevos traicionaron a mi banda…
+		/$$$/Option|Pero si se ayudó de la Falange, partido revolucionario de inicios anticatólicos.
+			/$$$$/San Pedro|El muy cabrón los embaucó y acabaron en manos de la iglesia. Al final nos comimos con patatas a esos cavernícolas, eran mu bonicos, pero mu tonticos.
+		/$$$/Option|¿Romano? Pero si era de Ferrol.
+			/$$$$/San Pedro|Pero tú para quién trabajas, chaval. ¡Para Roma, para el Vaticano! Espabila, capullo.

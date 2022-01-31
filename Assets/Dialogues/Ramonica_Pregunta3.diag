@@ -1,0 +1,18 @@
+/$/Player|No se si recuerda cómo falleció. Tuvo un accidente de coche, lo siento.
+	/$$/Ramónica|Sí, tengo lagunas, pero me acuerdo de algunas cosas.
+		/$$$/Player|Tengo que preguntarle, ¿qué recuerda exactamente antes de morir?
+			/$$$$/Ramónica|Pues, a ver… Fue todo muy rápido, estaba cruzando una calle y me atropelló un coche.
+				/$$$$$/Player|Y, ¿cómo es posible que no se diese cuenta de que venía un coche antes de cruzar?
+					/$$$$$$/Ramónica|Fue tarde, recuerdo el frío de la noche acariciando mis brazos. También recuerdo que estaba completamente sola.
+						/$$$$$$$/Player|¿Y al ser de noche me está diciendo que no vió al coche desde lejos? ¿Tomó algún tipo de estupefaciente y/o narcótico?
+							/$$$$$$$$/Ramónica|Esa noche quedé con unes amigues, fuimos a un pub y nos tomamos algunas cervezas, pero no recuerdo sentirme embriagada, no creo que esa sea la causa de mi muerte. De hecho, el coche iba con las luces apagadas.
+								/$$$$$$$$$/Option|¿Las luces apagadas?¿En plena noche?
+									/$$$$$$$$$$/Ramónica|Sí, cuesta creerlo, pero estoy completamente segura de ello.
+										/$$$$$$$$$$$/Player|¿No hubo nada que le llamara la atención? Si es cierto todo lo que dice, que un coche de noche vaya con las luces apagadas no es lo normal.
+											/$$$$$$$$$$$$/Ramónica|¡Sí! Acabo de recordar algo más. Justo antes de morir pude ver la matrícula del coche, era un poco rara, no sé si usted sabe de donde puede ser: 2047 SPDR
+												/$$$$$$$$$$$$$/Player|Qué raro… Esos números y letras me resultan familiares. Lo buscaré en los archivos.
+								/$$$$$$$$$/Option|Las personas suelen decir que no van borrachas cuando sí lo están.
+									/$$$$$$$$$$/Ramónica|Estoy completamente segura de que no es mi caso, de hecho no suelo beber mucho.
+										/$$$$$$$$$$$/Player|¿No hubo nada que le llamara la atención? Si es cierto todo lo que me dice, que un coche de noche vaya con las luces apagadas no es lo normal.
+											/$$$$$$$$$$$$/Ramónica|¡Sí! Acabo de recordar algo más. Justo antes de morir pude ver la matrícula del coche, era un poco rara, no sé si usted sabe de donde puede ser: 2047 SPDR
+												/$$$$$$$$$$$$$/Player|Qué raro… Esos números y letras me resultan familiares. Lo buscaré en los archivos.

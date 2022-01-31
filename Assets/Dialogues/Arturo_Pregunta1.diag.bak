@@ -1,0 +1,49 @@
+/$/Player|Por lo que leo aquí ha sido usted una estrella de telenovelas bastante importante en toda Iberoamérica. ¿Cómo se siente al ser el ídolo de todo un continente?
+	/$$/Arturo|No te equivoques, pipiolo, ¡yo soy una estrella de cine del más alto nivel! Me llamaban el Clin Isbu de Chamberí, era el tipo duro del destape, chalao. ¿No ves que todos esos tiraflechas me idolatraban?
+		/$$$/Arturo|¡Esos panchitos me han hecho de oro! 
+			/$$$$/Option|¿Cómo dice? ¿Panchitos, tiraflechas? Creo que no es una manera muy apropiada de referirse a sus fans, ¿No cree?
+				/$$$$$/Arturo|A mí no me digas cómo hablar, crack. ¡Que yo he estao en medio mundo! Esa gente es la barraquera de la raza, les hicimos un favor evangelizándolos.
+					/$$$$$$/Player|Perdone pero no tolero que hablen así en mi despacho, el racismo es algo que debemos erradicar en este mundo si queremos progresar.
+						/$$$$$$$/Arturo|¡¿Racista yo?! Si tengo amigos de todos los colores, podemita de mier**. Si hasta apadriné al hijo de mi asistenta negrita.
+							/$$$$$$$$/Option|Tranquilícese, señor, le recuerdo que está hablando con un funcionario del cielo, que está aquí para decidir su estancia en la eternidad. Y no diga negrita, sigue siendo racista.
+								/$$$$$$$$$/Arturo|Yo la llamo como me da la gana, que para eso la pago. Además, a esa piojosa le encantaba que la llamara así en la cama.
+									/$$$$$$$$$$/Option|Por favor, deje de hablar así, me da usted mucho asco.
+										/$$$$$$$$$$$/Arturo|¿Pero tú sabes con quién estás hablando, mangarrián? ¡Que soy el Clin Isbu de Chamberí!
+									/$$$$$$$$$$/Option|Intente explicar sus vivencias con los menos insultos posibles.
+										/$$$$$$$$$$$/Arturo|Eso está hecho, rojo de mier**.
+									/$$$$$$$$$$/Option|Un momento, ¿estamos hablando de que apadrinó a su hijo ilegítimo?
+										/$$$$$$$$$$$/Arturo|¡Esa muerta de hambre pensaba decírselo a mi mujer! A punto estuve de mandarle a unos sicarios, pero bueno…
+							/$$$$$$$$/Option|Eso no suena demasiado bien para un Misionero de Honor, señor.
+								/$$$$$$$$$/Arturo|Por eso mismo, hablo con la autoridad que me da el haber viajao por medio mundo ayudando a muertos de hambre a tener un futuro mejor que esnifando pegamento.
+							/$$$$$$$$/Option|¿Se cree que todos los antirracistas son de izquierdas? Parece que no es tan tolerante como dice ser.
+								/$$$$$$$$$/Arturo|Demasiado tolerante soy para todo lo que se ha metido desde que se fue mi Paquito.
+									/$$$$$$$$$$/Player|Entonces reconoce haber sido simpatizante del franquismo, ¿es así?
+										/$$$$$$$$$$$/Arturo|¡¿Simpatizante?! Sin insultar, niñato, que no tienes ni puta idea. Que los nacionales mataron a mi padre en la guerra.
+											/$$$$$$$$$$$$/Option|¿A su padre?
+												/$$$$$$$$$$$$$/Arturo| Ese hijo de p*** era republicano, nos abandonó a mi madre y a mí para irse con sus amigotes a luchar.
+											/$$$$$$$$$$$$/Option|¿Los mismos nacionales que luego le auparon al estrellato?
+												/$$$$$$$$$$$$$/Arturo|Nos hicieron un favor matándolo, luego se lo agradecí a Paquito haciendo un par de películas propagandísticas. 
+											/$$$$$$$$$$$$/Option|Pero si era amigo personal de Franco.
+												/$$$$$$$$$$$$$/Arturo|Claro, lo conocí cuando los nacionales ganaron Madrid, necesitaban a un niño que hiciera la voz de la Nueva España, y parece que les gustó je,je.
+			/$$$$/Option|¿Se refiere a Clint Eastwood?
+				/$$$$$/Arturo|¡El mismo! ¡El tite Clin! Un gran hombre, aunque sus películas sean cada vez más de rojos, ya sabe.
+					/$$$$$$/Option|Pero si en los últimos años ha ganado montones de premios, es un director reputado.
+						/$$$$$$$/Arturo|Mira chavalín, Clin estaba mejor delante de la cámara, matando panchitos, negros y yonkis. 
+					/$$$$$$/Option|Million Dollar Baby es una de las mejores películas de boxeo de la historia del cine, fue nombrada como la mejor película del siglo 21 por el New York Times.
+						/$$$$$$$/Arturo|¡¿Mujeres boxeando?! No me hagas reír, en un cuadrilátero la única mujer que puede entrar es la azafata cachonda anunciando el asalto.
+					/$$$$$$/Option|¿Se refiere a sus películas del oeste y de Harry El Sucio?
+						/$$$$$$$/Arturo|Exacto. Ese tipo comía alambre de espino y meaba napalm, y podía acertar al culo de una pulga a trescientos metros.
+							/$$$$$$$$/Player|¿Llegó a conocerlo?
+								/$$$$$$$$$/Arturo|Bueno, una vez me lo crucé en un hotel en Almería cuando estaba rodando la Trilogía del Dólar. 
+									/$$$$$$$$$$/Player|¿En serio? ¿Y qué le dijo? ¿Hablaron de sus películas?
+										/$$$$$$$$$$$/Arturo|Me rozó el hombro al pasar al lado mía. Estuve ocho años sin lavarme el brazo entero.
+			/$$$$/Option|Bueno, un actor de telenovelas y películas del destape no creo que se considere igual que un actor de método.
+				/$$$$$/Arturo|¿De método dices? ¡¿De método!? Mira gualtrapa, yo no he necesitado ningún método para actuar, ¡eso es pa maric***es!
+					/$$$$$$/Option|Por favor deje de ser tan soez y peyorativo, hace décadas que esa palabra se considera hiriente.
+						/$$$$$$$/Arturo|¿Hiriente? ¡Pues me la comes con los dientes! Jajota, jajota.
+					/$$$$$$/Option|Dejando a un lado los insultos sexuales, los métodos de actuación han sido esenciales para los actores en el estudio de la psique humana.
+						/$$$$$$$/Arturo|Si tienes tablas no necesitas métodos. Mi colega Pajares decía que el método es como ponerte un calcetín en los gayumbos, por muchos aspavientos al final se nota.
+					/$$$$$$/Option|¿No será que nunca ha estado en una producción teatral o audiovisual de primera categoría?
+						/$$$$$$$/Arturo|No me toques los huevos, piolín. Yo he estao en veintisiete zarzuelas, ¡producciones teatrales de primera categoría! ¿Y qué me dices de mis películas con Carmen Sevilla o Sarita Montiel?
+							/$$$$$$$/Arturo|Que yo he enamorao a las más grandes, piltrafilla…
+		

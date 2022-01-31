@@ -1,0 +1,26 @@
+/$/Player|Aquí pone que cuando era un adolescente, rechazó la fe cristiana. ¿Es eso cierto?
+	/$$/Ramónica|A ver, lo primero, soy una mujer, así que preferiría que utilizase el femenino para referirse a mí…
+		/$$$/Player|¡Ah! Claro, lo siento. Es que en los documentos aparece todo en masculino.
+			/$$$$/Ramónica|Me imagino que se debe a que nací con genitales masculinos, pero siempre he sido una mujer.
+				/$$$$$/Player|De acuerdo, lo tendré en cuenta a partir de ahora, lo siento.
+					/$$$$$$/Ramónica|No se preocupe. Respecto a la pregunta, nunca he rechazado la fe cristiana, pero se podrá imaginar que los feligreses de mi parroquia no se pusieron muy contentos cuando les expliqué mi situación.
+						/$$$$$$$/Option|Entiendo… ¿Y cómo es que, después de tanto rechazo por parte de su comunidad, ha mantenido su fe?
+							/$$$$$$$$/Ramónica|Al principio fue difícil. Y de hecho, sí que he perdido la fe.
+								/$$$$$$$$$/Option|¡¿Cómo?! ¿No me acaba de decir que nunca ha rechazado la fe cristiana?
+									/$$$$$$$$$$/Ramónica|Sí he perdido la fe, pero la fe en la Iglesia. El mensaje de Jesús era un mensaje de amor, no un mensaje de tradicionalismo, superioridad y conquista.
+										/$$$$$$$$$$$/Player|¿No es esa una acusación muy grave?
+											/$$$$$$$$$$$$/Ramónica|Ciertamente, pero mi experiencia me ha demostrado que así es.
+								/$$$$$$$$$/Option|¿A qué se refiere con “al principio”?
+									/$$$$$$$$$$/Ramónica|Tenga en cuenta que mi educación ha sido puramente tradicional, pero desde siempre ha habido algo que no me cuadraba. Cuando descubrí que en realidad era una mujer encerrada en el cuerpo de un hombre, se me rompieron todos los esquemas y rechacé completamente mi educación.
+										/$$$$$$$$$$$/Player|¿Entonces admite que rechazó su fe?
+											/$$$$$$$$$$$$/Ramónica|Como le digo, solo al principio. Con el tiempo terminé dándome cuenta de que el problema no residía en la fe ni el mensaje de Jesús Cristo, si no en la institución eclesiástica. Desde que San Pedro fundó la Iglesia, el ser humano se ha encargado de pervertirla.
+												/$$$$$$$$$$$$$/Option|Desde que San Pedro fundó la Iglesia dice usted… ¿no?
+													/$$$$$$$$$$$$$$/Ramónica|Saque sus propias conclusiones.
+												/$$$$$$$$$$$$$/Option|Le recuerdo que está hablando de mi jefe…
+													/$$$$$$$$$$$$$$/Ramónica|…
+						/$$$$$$$/Option|Entonces me imagino que estará bastante resentida con ellos.
+							/$$$$$$$$/Ramónica|He de admitir que al principio sí. Y no me enorgullezco de ello. Sus acciones fueron el resultado de siglos de deformación de la palabra de Jesús. Con el tiempo me dije: “Padre, perdónalos, porque no saben lo que hacen”.
+								/$$$$$$$$$/Option|Entonces, ¿me está diciendo que los ha perdonado?
+									/$$$$$$$$$$/Ramónica|Efectivamente. Y me apena mucho que en algunos casos el entendimiento no sea recíproco… Pero bueno, “el Señor perdonará nuestras ofensas, como nosotros perdonamos a los que nos ofenden”.
+								/$$$$$$$$$/Option|Lucas 23:34, veo que conoce bien el evangelio.
+									/$$$$$$$$$$/Ramónica|El de San Lucas es mi favorito.

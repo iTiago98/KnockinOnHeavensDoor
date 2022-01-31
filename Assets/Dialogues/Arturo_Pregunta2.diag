@@ -1,0 +1,21 @@
+/$/Player|Aquí pone que fue Cofundador de la Asociación de Actores, dice mucho de usted que creara un sindicato solidario para su gremio.
+	/$$/Arturo|Ni sindicatos ni poll*s, ¡a mí no me llames comunista que te rajo! 
+		/$$$/Player|Tranquilícese, caballero, sólo le he nombrado el tipo de asociación que ayudó a fundar, que es de naturaleza sindical.
+			/$$$$/Arturo|¡Pero si fue idea de Paquito! Bueno o de alguien del régimen, ya me entiende. Todos los méritos iban para el Generalísimo. Dios lo tenga en su gloria.
+				/$$$$$/Option|¿Se refiere al sindicato de pega conocido como sindicato vertical?
+					/$$$$$$/Arturo|A la pantomima esa que hizo Paquito para tener tranquilos a los obreros y atarlos en corto, una idea brutal, ¡menudo truquejo y no el de Juan Tamariz!
+				/$$$$$/Option|¿Entonces no fue idea suya?
+					/$$$$$$/Arturo|¿Mía? Yo estaba demasiado ocupado pillando venéreas por medio mundo. Me usaron de fachada para crear esa asociación cuando llegaron los comunistas, para vigilar a los de la farándula de comportamientos bolcheviques.
+				/$$$$$/Option|¿Y qué me puede decir de la otra cofundadora, la cantante Rosa Melano?
+					/$$$$$$/Arturo|Esa era una pobre borracha que no tenía dónde caerse muerta y que se empeñó en crear las ayudas a los actores y demás gilipolleces solidarias.
+						/$$$$$$$/Option|¿No se rumoreaba que tuvo un idilio con Franco?
+							/$$$$$$$$/Arturo|Ay Paquito, pobre anormal. Si se la pasé yo, que me había cansado de ella. 
+								/$$$$$$$$$/Option|¿Cómo que se la pasó? Las personas no son objetos que se soben y se pasen, cuidado con lo que dice.
+									/$$$$$$$$$$/Arturo|¡Que no, dice! Rosa estaba loquita por mí, hacía con ella lo que quería, fíjate que me dijo que estaba embarazada y se me ocurrió endosarle el bebé al mismísimo.
+										/$$$$$$$$$$$/Player|Es usted un ser despreciable.
+											/$$$$$$$$$$$$/Arturo|Cómeme los hue**s y escucha el plan que pergeñé, julay. Emborraché al tontito en un guateque que organizamos en una de sus cacerías famosas y le metí a la periquita en la cama.@2
+												/$$$$$$$$$$$$$/Arturo|La convencí diciendo que era la única posibilidad para su futuro hijo, si no acabaría en un orfanato. Ay cómo lloraba la pobre, jajaja.
+								/$$$$$$$$$/Option|Pobre mujer, otra víctima incontable del heteropatriarcado. Al final parece que tantas telenovelas le sirvieron para algo.
+									/$$$$$$$$$$/Arturo|Hombre, luego le hicieron una telenovela con un guión bastante parecido y ganó mucho dinero, que iba directamente al mueble-bar. No paraba de llorar y acabó en la bebida, según siempre decía la llorica, para afrontarlo.
+						/$$$$$$$/Option|Es considerada como la madrina de los artistas en este país, su labor fue importantísima para la supervivencia de muchos actores, músicos, pintores, y un largo etcétera.
+							/$$$$$$$$/Arturo|Es una pobre infeliz que no sabe apreciar todo lo que hicimos por ella. ¡Si Franco le montó la asociación para que dejara de llorar!

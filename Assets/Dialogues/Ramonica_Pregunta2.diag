@@ -1,0 +1,17 @@
+/$/Player|Aquí pone que se ha dedicado a llevar a los jóvenes por el mal camino. ¿Qué tiene que decir al respecto?
+	/$$/Ramónica|¿Acaso es “el mal camino” aceptar a cada persona como es y cómo se siente?
+		/$$$/Option|No, claro, yo…
+			/$$$$/Ramónica|¿Acaso es “el mal camino” ayudar y apoyar a aquellas personas que están sufriendo la discriminación de aquellos que consideran sus familias y amigos, solo por no encajar en los estereotipos de su idiosincrasia?
+				/$$$$$/Player|Yo solo me remito al documento, estoy obligado a preguntarle.
+					/$$$$$$/Ramónica|Seguramente en el documento haya más de una errata, una se acaba acostumbrando a este tipo de cosas.
+		/$$$/Option|De hecho no, ese no es el mal camino, pero hay varios vacíos legales donde algunos se aprovechan para abusar de otros. ¿A qué se dedicaba exactamente?
+			/$$$$/Ramónica|Lo que le acabo de decir, a aceptar a cada persona tal y como es, haciéndonos oír a través de redes sociales y manifestaciones.
+				/$$$$$/Player|¿A qué tipo de manifestaciones ha asistido?
+					/$$$$$$/Ramónica|Si lo que me estás preguntando es si me dedico a romper escaparates y quemar contenedores, no. Todas las manifestaciones a las que he asistido han sido pacíficas.
+						/$$$$$$$/Option|No era mi intención ofenderla.
+						/$$$$$$$/Option|¿Puedo preguntarle qué reivindicaba?
+							/$$$$$$$$/Ramónica|A ver, siempre he sido una mujer y nunca me han terminado de aceptar como tal. Nací en el cuerpo de un hombre y he tenido problemas para aceptarme. 
+								/$$$$$$$$$/Ramónica|De pequeña, cuando te encuentras en una situación similar, nadie te enseña a salir adelante y a aceptar que lo que te ocurre no es ningún tipo de enfermedad o algo malo que te ocurre solo a ti.
+									/$$$$$$$$$$/Ramónica|Justo por eso, quiero decirle a los demás que pueden contar con una comunidad, que hay más personas que comprenden por lo que están pasando y que pueden contar con nosotres.
+										/$$$$$$$$$$$/Player|Siento que haya tenido que pasar por todo eso, me alegro de que dedique su vida a ayudar a los demás, creo que es muy bonito por su parte.
+											/$$$$$$$$$$$$/Ramónica|Gracias, pero simplemente les enseño la realidad a los que aún no han podido llegar a ella.

@@ -1,0 +1,16 @@
+/$/Player|¿Qué opina de su amigo el señor Nerfández?
+	/$/San Pedro|¿Arturín? Menudo mastodonte, ¿eh? Nos hemos corrido unas buenas juergas gracias a la ayahuasca. 
+		/$/Option|¿Cómo, estuvo más veces en coma?
+			/$/San Pedro|Desde que me conoció por casualidad, volvía cada par de décadas a verme. 
+				/$/Player|¿Entonces participó en otras maquinaciones?
+					/$/San Pedro|¡En casi todas! Siempre me lo encontraba perdidísimo en la vida, cuando tocaba fondo en sus espirales de mujeres y drogas.
+						/$/Player|¿No tendrá usted algo que ver con la carrera truncada de cierta cantante?
+							/$/San Pedro|Casi siempre era por ella, lo de su alcoholismo, la Asociación de Actores… Era un pu** grano en el culo.
+		/$/Option|¿La ayahuasca?
+			/$/San Pedro|Siempre se quejaba de que no era fácil encontrar un alijo de suficiente pureza como para volar hasta aquí, pero cuando lo encontraba, aquí estaba.
+				/$/Player|¿Cómo es posible que durara hasta los 89 años con semejante historial de excesos?
+					/$/San Pedro|¿Por qué va a ser? ¡Era una estrella del rock!
+						/$/Player| Esa reliquia lo más a lo que llegó fue a ser estrella de la zarzuela.
+							/$/San Pedro|¡Esas han sido las estrellas del rock en España durante siglos!
+		/$/Option|Lo de mastodonte lo dice por ser un dinosaurio, ¿no?
+			/$/San Pedro|¡El puto tiranosaurio rex de la farándula!
