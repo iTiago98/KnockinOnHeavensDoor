@@ -111,10 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7c3e948c02f1e0498e1b9593e6138f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Text: {fileID: 0}
   dialoguePath: Arturo_Intro
-  logIndex: 0
   clickedColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
-  _clicked: 0
 --- !u!65 &6206961145108906318
 BoxCollider:
   m_ObjectHideFlags: 0
