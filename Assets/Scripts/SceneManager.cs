@@ -42,7 +42,6 @@ public class SceneManager : MonoBehaviour
 
     public void ReloadScene()
     {
-
         if (currentSuspect >= 0)
         {
             interrogationFiles[currentSuspect].SetActive(false);
@@ -50,12 +49,11 @@ public class SceneManager : MonoBehaviour
 
         currentSuspect++;
         CharacterManager.instance.UpdateCharacters(currentSuspect);
+        CharacterManager.instance.AllCharactersDisabled();
 
         interrogationFiles[currentSuspect].SetActive(true);
 
         ResetStamps();
-
-        //Color(characters[currentSuspect].GetComponent<Character>().myName);
     }
 
     public ClickableObject GetCurrentFile()
@@ -82,17 +80,6 @@ public class SceneManager : MonoBehaviour
         hellImage.SetActive(false);
     }
 
-
-    //public Transform GetCharacters()
-    //{
-    //    return characters[currentSuspect].transform;
-    //}
-
-    //public Transform GetSanPedro()
-    //{
-    //    return sanPedroCharacter.transform;
-    //}
-
     public Transform GetFafita()
     {
         return fafita;
@@ -106,64 +93,9 @@ public class SceneManager : MonoBehaviour
         MusicManager.instance.PlayStampSound(StampType.HELL);
     }
 
-    //public void GreyCharacters()
-    //{
-    //    Transform image = null;
-
-    //    foreach (GameObject c in characters)
-    //    {
-    //        image = c.transform.Find("Image");
-    //        image.GetComponent<Image>().sprite = c.GetComponent<Character>().disabledImage;
-    //    }
-
-    //    Character character = sanPedroCharacter.GetComponent<Character>();
-    //    image = character.transform.Find("Image");
-    //    image.GetComponent<Image>().sprite = character.GetComponent<Character>().disabledImage;
-    //}
-
-    //public void Color(string speakerName)
-    //{
-
-    //    if (speakerName == "San Pedro")
-    //    {
-    //        var character = sanPedroCharacter.GetComponent<Character>();
-    //        var image = character.transform.Find("Image");
-    //        image.GetComponent<Image>().sprite = character.GetComponent<Character>().happyImage;
-    //    }
-
-    //    GameObject gObject = null;
-    //    foreach (GameObject o in characters)
-    //    {
-    //        if (o.GetComponent<Character>().myName == speakerName) gObject = o;
-    //    }
-    //    if (gObject != null)
-    //    {
-    //        var image = gObject.transform.Find("Image");
-    //        image.GetComponent<Image>().sprite = gObject.GetComponent<Character>().talkingImage;
-    //    }
-
-    //}
-
-    //public void ColorAll()
-    //{
-    //    Character character = null;
-    //    Transform image = null;
-
-    //    foreach (GameObject o in characters)
-    //    {
-    //        character = o.GetComponent<Character>();
-    //        image = character.transform.Find("Image");
-    //        image.GetComponent<Image>().sprite = character.GetComponent<Character>().talkingImage;
-    //    }
-
-    //    character = sanPedroCharacter.GetComponent<Character>();
-    //    image = character.transform.Find("Image");
-    //    image.GetComponent<Image>().sprite = character.GetComponent<Character>().talkingImage;
-    //}
-
     public void ResetPlayMode()
     {
-        MouseController.instance.SetStateSelecting();
+        MouseController.instance.SetState(GameState.SELECTING);
         fade.GetComponent<Animator>().Play("Idle");
         MenuManager.instance.canPause = true;
         DialogueManager.instance.StartDialogue(GetCurrentIntroPath(), currentSuspect);
@@ -182,7 +114,7 @@ public class SceneManager : MonoBehaviour
     public void Stamp(StampType type)
     {
         MenuManager.instance.canPause = false;
-        MouseController.instance.SetStateStamping();
+        MouseController.instance.SetState(GameState.STAMPING);
         StopMusic();
         MusicManager.instance.PlayStampSound(type);
     }

@@ -15,7 +15,7 @@ public class InterrogationOption : ClickableObject
         if (_clicked) return;
         base.OnMouseClick();
 
-        MouseController.instance.OnInterrogationFileClick();
+        MouseController.instance.CheckObjectUp(null);
         MouseController.instance.enable = false;
         DialogueManager.instance.StartDialogue(dialoguePath, SceneManager.instance.currentSuspect);
         GetComponent<TextMesh>().color = clickedColor;

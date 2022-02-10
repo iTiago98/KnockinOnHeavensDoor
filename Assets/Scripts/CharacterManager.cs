@@ -48,6 +48,14 @@ public class CharacterManager : MonoBehaviour
             UpdateSprite(i, true);
         }
     }
+    
+    public void AllCharactersDisabled()
+    {
+        for (int i = -1; i < characters.Count; i++)
+        {
+            UpdateSprite(i, false);
+        }
+    }
 
     public bool IsLastCharacter(int characterIndex)
     {

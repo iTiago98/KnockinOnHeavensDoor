@@ -24,7 +24,7 @@ public class Character : ClickableObject
         }
         else
         {
-            MouseController.instance.SetStatePlaying();
+            MouseController.instance.SetState(GameState.PLAYING);
         }
     }
 
