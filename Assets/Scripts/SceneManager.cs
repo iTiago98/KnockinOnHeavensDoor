@@ -5,30 +5,14 @@ using UnityEngine.UI;
 
 public class SceneManager : MonoBehaviour
 {
-    private static SceneManager _instance;
-
-    public static SceneManager Instance
-    {
-        get
-        {
-            if (_instance == null)
-            {
-                _instance = GameObject.FindGameObjectWithTag("SceneManager").GetComponent<SceneManager>();
-            }
-
-            return _instance;
-        }
-    }
+    public static SceneManager instance;
 
     public GameObject mainMenu;
     public Button startButton;
     public InputField inputField;
     public GameObject fade;
-
-    public List<GameObject> characters;
-    public GameObject sanPedroCharacter;
+   
     public List<string> introPaths;
-    public List<TextAsset> introJsons;
     public List<GameObject> interrogationFiles;
 
     [HideInInspector]
@@ -42,21 +26,15 @@ public class SceneManager : MonoBehaviour
     public GameObject heavenImage;
     public GameObject hellImage;
 
-    public AudioSource heavenSound;
-    public AudioSource hellSound;
-
-    public AudioSource menuIntro;
-    public AudioSource menuLoop;
-
-    public List<AudioSource> intros;
-    public List<AudioSource> loops;
-
-    public float loopDelay;
-
     private void Awake()
     {
+        instance = this;
         currentSuspect = -1;
-        PlayMenuMusic();
+    }
+
+    private void Start()
+    {
+        MusicManager.instance.PlayMenuSong();
     }
 
     public void LoadScene()
@@ -71,22 +49,15 @@ public class SceneManager : MonoBehaviour
         if (currentSuspect >= 0)
         {
             interrogationFiles[currentSuspect].SetActive(false);
-            characters[currentSuspect].SetActive(false);
         }
 
         currentSuspect++;
+        CharacterManager.instance.UpdateCharacters(currentSuspect);
+        CharacterManager.instance.AllCharactersDisabled();
 
         interrogationFiles[currentSuspect].SetActive(true);
-        characters[currentSuspect].SetActive(true);
-        if (currentSuspect == 1 || currentSuspect == 3) sanPedroCharacter.SetActive(true);
 
-        heavenStamp.GetComponent<Animator>().Play("Idle");
-        hellStamp.GetComponent<Animator>().Play("Idle");
-
-        heavenImage.SetActive(false);
-        hellImage.SetActive(false);
-
-        Color(characters[currentSuspect].GetComponent<Character>().myName);
+        ResetStamps();
     }
 
     public ClickableObject GetCurrentFile()
@@ -94,14 +65,9 @@ public class SceneManager : MonoBehaviour
         return interrogationFiles[currentSuspect].GetComponent<ClickableObject>();
     }
 
-    public string GetCurrentIntroPath()
+    public TextAsset GetCurrentIntroPath()
     {
-        return introPaths[currentSuspect];
-    }
-
-    public TextAsset GetCurrentIntroJson()
-    {
-        return introJsons[currentSuspect];
+        return DialogueManager.instance.introFiles[currentSuspect];
     }
 
     public Transform GetInterrogationOptions()
@@ -109,14 +75,13 @@ public class SceneManager : MonoBehaviour
         return interrogationFiles[currentSuspect].transform.Find("Options").transform;
     }
 
-    public Transform GetCharacters()
+    private void ResetStamps()
     {
-        return characters[currentSuspect].transform;
-    }
+        heavenStamp.GetComponent<Animator>().Play("Idle");
+        hellStamp.GetComponent<Animator>().Play("Idle");
 
-    public Transform GetSanPedro()
-    {
-        return sanPedroCharacter.transform;
+        heavenImage.SetActive(false);
+        hellImage.SetActive(false);
     }
 
     public Transform GetFafita()
@@ -125,131 +90,44 @@ public class SceneManager : MonoBehaviour
     }
     public void PlayHeavenSound()
     {
-        heavenSound.Play();
+        MusicManager.instance.PlayStampSound(StampType.HEAVEN);
     }
     public void PlayHellSound()
     {
-        hellSound.Play();
+        MusicManager.instance.PlayStampSound(StampType.HELL);
     }
 
-    public void GreyCharacters()
+    public void ResetPlayMode()
     {
-        Transform image = null;
-
-        foreach (GameObject c in characters)
-        {
-            image = c.transform.Find("Image");
-            image.GetComponent<Image>().sprite = c.GetComponent<Character>().disabledImage;
-        }
-
-        Character character = sanPedroCharacter.GetComponent<Character>();
-        image = character.transform.Find("Image");
-        image.GetComponent<Image>().sprite = character.GetComponent<Character>().disabledImage;
-    }
-
-    public void Color(string speakerName)
-    {
-
-        if (speakerName == "San Pedro")
-        {
-            var character = sanPedroCharacter.GetComponent<Character>();
-            var image = character.transform.Find("Image");
-            image.GetComponent<Image>().sprite = character.GetComponent<Character>().happyImage;
-        }
-
-        GameObject gObject = null;
-        foreach (GameObject o in characters)
-        {
-            if (o.GetComponent<Character>().myName == speakerName) gObject = o;
-        }
-        if (gObject != null)
-        {
-            var image = gObject.transform.Find("Image");
-            image.GetComponent<Image>().sprite = gObject.GetComponent<Character>().happyImage;
-        }
-
-    }
-
-    public void ColorAll()
-    {
-        Character character = null;
-        Transform image = null;
-
-        foreach (GameObject o in characters)
-        {
-            character = o.GetComponent<Character>();
-            image = character.transform.Find("Image");
-            image.GetComponent<Image>().sprite = character.GetComponent<Character>().happyImage;
-        }
-
-        character = sanPedroCharacter.GetComponent<Character>();
-        image = character.transform.Find("Image");
-        image.GetComponent<Image>().sprite = character.GetComponent<Character>().happyImage;
-    }
-
-    public void StopPreviousMusic()
-    {
-        if (currentSuspect <= 0)
-        {
-            menuIntro.Stop();
-            menuLoop.Stop();
-            CancelInvoke("PlayMenuLoop");
-        }
-        else
-        {
-            intros[currentSuspect - 1].Stop();
-            loops[currentSuspect - 1].Stop();
-            CancelInvoke("PlayLoop");
-        }
-    }
-
-    public void StopMusic()
-    {
-
-        intros[currentSuspect].Stop();
-        loops[currentSuspect].Stop();
-        CancelInvoke("PlayLoop");
-
+        MouseController.instance.SetState(GameState.SELECTING);
+        fade.GetComponent<Animator>().Play("Idle");
+        MenuManager.instance.canPause = true;
+        //DialogueManager.instance.StartDialogue(GetCurrentIntroPath(), currentSuspect);
+        StoryManager.ins.StartDialogue(GetCurrentIntroPath());
     }
 
     public void StartMusic()
     {
-        if (characters[currentSuspect].GetComponent<Character>().myName == "Ram�nica" || characters[currentSuspect].GetComponent<Character>().myName == "Rosa")
-        {
-            PlayLoop();
-        }
-        else
-        {
-            intros[currentSuspect].Play();
-            Invoke("PlayLoop", intros[currentSuspect].clip.length + loopDelay);
-        }
+        MusicManager.instance.PlayCharacterSong(currentSuspect);
     }
 
-    private void PlayLoop()
+    public void StopMusic()
     {
-        loops[currentSuspect].Play();
+        MusicManager.instance.StopMusic(currentSuspect);
     }
 
-    private void PlayMenuMusic()
+    public void Stamp(StampType type)
     {
-        menuIntro.Play();
-        Invoke("PlayMenuLoop", menuIntro.clip.length - 2);
-    }
-
-    private void PlayMenuLoop()
-    {
-        menuLoop.Play();
+        MenuManager.instance.canPause = false;
+        MouseController.instance.SetState(GameState.STAMPING);
+        StopMusic();
+        MusicManager.instance.PlayStampSound(type);
     }
 
     public void ShowInputText()
     {
         startButton.gameObject.SetActive(false);
         inputField.gameObject.SetActive(true);
-    }
-
-    public void HideSanPedro()
-    {
-        sanPedroCharacter.SetActive(false);
     }
 
     public void HideMainMenu()
@@ -262,14 +140,14 @@ public class SceneManager : MonoBehaviour
         fade.GetComponent<Animator>().Play("FadeOut");
     }
 
+    public bool IsLastCharacter()
+    {
+        return CharacterManager.instance.IsLastCharacter(currentSuspect);
+    }
+
     public bool IsSanPedro()
     {
-        return characters[currentSuspect].GetComponent<Character>().myName == "San Pedro";
+        return CharacterManager.instance.IsSanPedro(currentSuspect);
     }
 
-    public bool IsRosa()
-    {
-        return characters[currentSuspect].GetComponent<Character>().myName == "Rosa";
-
-    }
 }
