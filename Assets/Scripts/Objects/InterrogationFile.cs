@@ -24,6 +24,7 @@ public class InterrogationFile : ClickableObject
 
     public override void OnMouseClick()
     {
+        base.OnMouseClick();
         switch (_position)
         {
             case 0:
@@ -33,7 +34,6 @@ public class InterrogationFile : ClickableObject
                 FileDown();
                 break;
         }
-
     }
 
     public void FileUp()
