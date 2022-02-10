@@ -15,7 +15,6 @@ public class Fafita : ClickableObject
 
     public override void OnMouseClick()
     {
-        base.OnMouseClick();
         if (_position == 0)
         {
             _anim.Play("CloseUp");

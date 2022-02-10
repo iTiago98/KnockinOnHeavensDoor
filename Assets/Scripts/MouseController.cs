@@ -4,7 +4,21 @@ using UnityEngine;
 
 public class MouseController : MonoBehaviour
 {
-    public static MouseController instance;
+    private static MouseController _instance;
+
+    public static MouseController Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = GameObject.FindGameObjectWithTag("MouseController").GetComponent<MouseController>();
+            }
+
+            return _instance;
+        }
+    }
+
 
     public List<Transform> clickableObjects;
     public GameObject fadeImage;
@@ -13,31 +27,19 @@ public class MouseController : MonoBehaviour
     public bool enable = false;
     public bool sanPedroJudge = false;
     public AudioSource endMusic;
-    
-
-    private GameState _state = GameState.SELECTING;
-
-    private ClickableObject _hovering = null;
-    private ClickableObject _objectUp = null;
-
-    private void Awake()
+    public enum State
     {
-        instance = this;
+        SELECTING, PLAYING, STAMPING, STAMPED
     }
+
+    private State _state = State.SELECTING;
+    private bool _fileUp = false;
+    private bool _fafitaUp = false;
 
     void Update()
     {
         if (!enable) return;
 
-        ClickableObject clickableObject = GetRaycastObject();
-
-        CheckHovering(clickableObject);
-        CheckClick(clickableObject);
-
-    }
-
-    private ClickableObject GetRaycastObject()
-    {
         var ray = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         var rayResult = Physics.Raycast(ray, out hit);
@@ -49,59 +51,63 @@ public class MouseController : MonoBehaviour
             clickableObject = obj.GetComponent<ClickableObject>();
         }
 
-        return clickableObject;
-    }
-
-    private void CheckHovering(ClickableObject clickableObject)
-    {
-        if (clickableObject != _hovering)
+        var mouseInput = Input.GetMouseButtonDown(0);
+        OnMouseHoverExit();
+        if (clickableObject != null && AvailableObject(clickableObject.gameObject))
         {
-            HoverExit();
-            if (clickableObject != null && AvailableObject(clickableObject.gameObject))
+            if (_state == State.SELECTING)
             {
-                clickableObject.OnMouseHoverEnter();
-                _hovering = clickableObject;
-            }
-        }
-    }
-
-    public void CheckObjectUp(ClickableObject clickableObject)
-    {
-        if (_objectUp != null)
-        {
-            _objectUp.OnMouseClick();
-            _objectUp = null;
-        }
-        else if (clickableObject != null)
-        {
-            _objectUp = clickableObject;
-            _objectUp.OnMouseClick();
-        }
-    }
-
-    private void CheckClick(ClickableObject clickableObject)
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (clickableObject != null && AvailableObject(clickableObject.gameObject))
-            {
-                if (_state == GameState.PLAYING && IsGrabbableObject(clickableObject.gameObject))
-                    CheckObjectUp(clickableObject);
-                else
+                OnMouseHoverEnter(clickableObject);
+                if (mouseInput && clickableObject.CompareTag("Suspect"))
+                {
                     clickableObject.OnMouseClick();
+                }
             }
-            else
+            else if (_state == State.PLAYING)
+            {
+                OnMouseHoverExit();
+                OnMouseHoverEnter(clickableObject);
+                if (mouseInput)
+                {
+                    switch (clickableObject.tag)
+                    {
+                        case "InterrogationFile":
+                            OnInterrogationFileClick();
+                            break;
+                        case "InterrogationOption":
+                        case "HeavenStamp":
+                        case "HellStamp":
+                            OnMouseClick(clickableObject);
+                            break;
+                        case "Fafita":
+                            OnFafitaClick();
+                            break;
+                    }
+                }
+            }
+        }
+        else
+        {
+            if (mouseInput)
             {
                 switch (_state)
                 {
-                    case GameState.PLAYING:
-                        CheckObjectUp(null);
+                    case State.PLAYING:
+                        if (_fileUp)
+                        {
+                            OnInterrogationFileClick();
+                            return;
+                        }
+                        if (_fafitaUp)
+                        {
+                            OnFafitaClick();
+                            return;
+                        }
                         break;
-                    case GameState.STAMPED:
-                        if (SceneManager.instance.IsLastCharacter())
+                    case State.STAMPED:
+                        if (SceneManager.Instance.IsRosa() || SceneManager.Instance.IsSanPedro())
                         {
                             endImage.GetComponent<Animator>().Play("End");
-                            enable = false;
                             endMusic.Play();
                         }
                         else
@@ -115,51 +121,69 @@ public class MouseController : MonoBehaviour
         }
     }
 
+    private void OnMouseClick(ClickableObject o)
+    {
+        if (AvailableObject(o.gameObject)) o.OnMouseClick();
+    }
+
+    private void OnMouseHoverExit()
+    {
+        foreach (Transform transform in clickableObjects)
+        {
+            transform.gameObject.GetComponent<ClickableObject>().OnMouseHoverExit();
+        }
+
+        foreach (Transform transform in SceneManager.Instance.GetInterrogationOptions())
+        {
+            transform.gameObject.GetComponent<ClickableObject>().OnMouseHoverExit();
+        }
+
+
+        SceneManager.Instance.GetCharacters().gameObject.GetComponent<ClickableObject>().OnMouseHoverExit();
+
+        SceneManager.Instance.GetSanPedro().gameObject.GetComponent<ClickableObject>().OnMouseHoverExit();
+    }
+
+    private void OnMouseHoverEnter(ClickableObject o)
+    {
+        if (AvailableObject(o.gameObject)) o.OnMouseHoverEnter();
+    }
+
     private bool AvailableObject(GameObject o)
     {
-        switch (_state)
-        {
-            case GameState.SELECTING:
-                return o.CompareTag("Suspect");
-            case GameState.PLAYING:
-                if (_objectUp != null)
-                {
-                    if (_objectUp.CompareTag("InterrogationFile")) return o.CompareTag("InterrogationOption");
-                }
-                else
-                {
-                    bool hellStampAvailable = (sanPedroJudge || !SceneManager.instance.IsSanPedro()) && o.CompareTag("HellStamp");
-                    return o.CompareTag("InterrogationFile") || o.CompareTag("Fafita") || o.CompareTag("HeavenStamp") || hellStampAvailable;
-                }
-                break;
-        }
-        return false;
+        return (_state == State.PLAYING && _fileUp && o.CompareTag("InterrogationOption"))
+            || (_state == State.PLAYING && !_fileUp && !_fafitaUp && (o.CompareTag("InterrogationFile") || o.CompareTag("HeavenStamp") || o.CompareTag("Fafita")))
+            || (_state == State.PLAYING && (sanPedroJudge || !SceneManager.Instance.IsSanPedro()) && !_fileUp && !_fafitaUp && (o.CompareTag("HellStamp")))
+        || (_state == State.SELECTING && (o.CompareTag("Suspect")));
     }
 
-    private bool IsGrabbableObject(GameObject o)
-    {
-        return o.CompareTag("InterrogationFile") || o.CompareTag("Fafita");
-    }
     public void OnInterrogationFileClick()
     {
-        SceneManager.instance.GetCurrentFile().OnMouseClick();
+        SceneManager.Instance.GetCurrentFile().OnMouseClick();
+        _fileUp = !_fileUp;
     }
 
-    public void SetState(GameState state)
+    private void OnFafitaClick()
     {
-        _state = state;
-    }
-    private void HoverExit()
-    {
-        if (_hovering != null)
-        {
-            _hovering.OnMouseHoverExit();
-            _hovering = null;
-        }
+        SceneManager.Instance.GetFafita().GetComponent<ClickableObject>().OnMouseClick();
+        _fafitaUp = !_fafitaUp;
     }
 
+    public void SetStateSelecting()
+    {
+        _state = State.SELECTING;
+    }
+    public void SetStatePlaying()
+    {
+        _state = State.PLAYING;
+    }
+    public void SetStateStamping()
+    {
+        _state = State.STAMPING;
+        OnMouseHoverExit();
+    }
     public void SetStateStamped()
     {
-        _state = GameState.STAMPED;
+        _state = State.STAMPED;
     }
 }

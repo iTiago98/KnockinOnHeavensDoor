@@ -6,10 +6,7 @@ abstract public class ClickableObject : MonoBehaviour
 {
     public GameObject Text;
 
-    virtual public void OnMouseClick()
-    {
-        OnMouseHoverExit();
-    }
+    abstract public void OnMouseClick();
     abstract public void OnMouseHoverEnter();
     abstract public void OnMouseHoverExit();
 

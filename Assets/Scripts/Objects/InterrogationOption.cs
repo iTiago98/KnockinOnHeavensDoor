@@ -13,11 +13,10 @@ public class InterrogationOption : ClickableObject
     public override void OnMouseClick()
     {
         if (_clicked) return;
-        base.OnMouseClick();
 
-        MouseController.instance.CheckObjectUp(null);
-        MouseController.instance.enable = false;
-        DialogueManager.instance.StartDialogue(dialoguePath, SceneManager.instance.currentSuspect);
+        MouseController.Instance.OnInterrogationFileClick();
+        MouseController.Instance.enable = false;
+        DialogueManager.ins.StartDialogue(dialoguePath, SceneManager.Instance.currentSuspect);
         GetComponent<TextMesh>().color = clickedColor;
         _clicked = true;
     }

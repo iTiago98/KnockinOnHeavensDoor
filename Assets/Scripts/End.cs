@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class End : MonoBehaviour
 {
-    public void ShowPauseMenu()
+    public void EnablePauseMenu()
     {
-        MenuManager.instance.canPause = true;
-        MenuManager.instance.ShowFinalMenu();
+        MenuManager.ins.canPause = true;
     }
 }

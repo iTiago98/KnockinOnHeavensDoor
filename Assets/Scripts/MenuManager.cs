@@ -6,22 +6,22 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public static MenuManager instance;
+    public static MenuManager ins;
 
     public KeyCode pauseKey;
     public GameObject pauseScreen;
-    public GameObject returnButton;
-    public GameObject restartButton;
-
     public UnityEvent onPauseGame;
     [HideInInspector]
     public bool canPause;
 
     public bool isPaused => pauseScreen.activeInHierarchy;
 
+    private float _godProbability;
+    private float _devilProbability;
+
     void Awake()
     {
-        instance = this;
+        ins = this;
     }
 
     private void Update()
@@ -33,21 +33,19 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    public void ShowFinalMenu()
+    private void CheckGodCameo()
     {
-        pauseScreen.SetActive(true);
-        returnButton.SetActive(false);
-        restartButton.SetActive(true);
+
+    }
+
+    private void CheckDevilCameo()
+    {
+
     }
 
     public void ResumeGame()
     {
         pauseScreen.SetActive(false);
-    }
-
-    public void RestartGame()
-    {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 
     public void CloseApplication()

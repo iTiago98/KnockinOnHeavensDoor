@@ -7,24 +7,22 @@ using UnityEngine.UI;
 public class Character : ClickableObject
 {
     public string myName;
-
-    public Sprite defaultImage;
+    public Sprite happyImage;
     public Sprite disabledImage;
-
     public Color highlightColor;
     public Image faceImage;
 
     public override void OnMouseClick()
     {
-        base.OnMouseClick();
         if (transform.name == "San Pedro Side")
         {
-            SceneManager.instance.StopMusic();
-            SceneManager.instance.FadeOut();
+            SceneManager.Instance.StopMusic();
+            SceneManager.Instance.FadeOut();
         }
         else
         {
-            MouseController.instance.SetState(GameState.PLAYING);
+            if (myName == "Rosa") SceneManager.Instance.HideSanPedro();
+            MouseController.Instance.SetStatePlaying();
         }
     }
 
@@ -32,11 +30,15 @@ public class Character : ClickableObject
     {
         ShowText();
         faceImage.color = highlightColor;
+        //var material = GetComponent<Renderer>().material;
+        //material.EnableKeyword("_EMISSION");
     }
 
     public override void OnMouseHoverExit()
     {
         HideText();
         faceImage.color = Color.white;
+        //var material = GetComponent<Renderer>().material;
+        //material.DisableKeyword("_EMISSION");
     }
 }

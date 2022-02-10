@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    public static DialogueManager instance;
+    public static DialogueManager ins;
 
     public SanPedroFile sanPedroFile;
     public GameObject dialogueBox;
@@ -25,18 +25,17 @@ public class DialogueManager : MonoBehaviour
     private Dialogue _dialogueTree;
     private List<string> _option;
     private bool _typing;
-    private bool _canSkip;
     private int _logIndex;
 
     void Awake()
     {
-        instance = this;
+        ins = this;
         for (int i = 0; i < 5; i++) log.Add("");
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(skipDialogueKey) && _canSkip) SkipTypingAnimation();
+        if (Input.GetKeyDown(skipDialogueKey)) SkipTypingAnimation();
     }
 
     private void DisplayNextSentence()
@@ -100,7 +99,6 @@ public class DialogueManager : MonoBehaviour
             }
         }
         else nextButton.SetActive(false);
-        _canSkip = false;
         _typing = false;
     }
 
@@ -111,7 +109,6 @@ public class DialogueManager : MonoBehaviour
         _dialogueTree = new Dialogue(System.IO.File.ReadAllText(@"Assets\Dialogues\" + dialoguePath + ".diag", System.Text.Encoding.UTF8));
         dialogueBox.SetActive(true);
         nextButton.SetActive(false);
-        _canSkip = true;
         DisplayNextSentence();
     }
 
@@ -119,9 +116,9 @@ public class DialogueManager : MonoBehaviour
     {
         log[_logIndex] += "\n----------------------------\n\n";
         dialogueBox.SetActive(false);
-        MouseController.instance.enable = true;
-        CharacterManager.instance.AllCharactersDefault();
-        if (_dialoguePath.Contains("Intro") && SceneManager.instance.currentSuspect != 3) CharacterManager.instance.ShowSanPedro(false);
+        MouseController.Instance.enable = true;
+        SceneManager.Instance.ColorAll();
+        if (_dialoguePath.Contains("Intro") && SceneManager.Instance.currentSuspect != 3) SceneManager.Instance.HideSanPedro();
     }
 
     public void SelectOption(int i)
@@ -134,7 +131,17 @@ public class DialogueManager : MonoBehaviour
 
     private void SetCharacterSpeaking(string speakerName)
     {
-        CharacterManager.instance.UpdateCharactersSprites(speakerName);
+        SceneManager.Instance.GreyCharacters();
+        switch(speakerName)
+        {
+            case "Fulgencio":
+            case "Arturo":
+            case "Ramónica":
+            case "Rosa":
+            case "San Pedro":
+                SceneManager.Instance.Color(speakerName);
+                break;
+        }
     }
 
     public void SkipTypingAnimation()
@@ -145,11 +152,5 @@ public class DialogueManager : MonoBehaviour
             npcText.text = _dialogueTree.getTextNPC();
             EndNPCSentence();
         }
-    }
-
-    public void OnNextButtonClicked()
-    {
-        SelectOption(0);
-        _canSkip = true;
     }
 }
