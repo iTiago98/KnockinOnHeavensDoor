@@ -8,7 +8,7 @@ public class Log : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            foreach (string s in DialogueManager.ins.log)
+            foreach (string s in DialogueManager.instance.log)
                 Debug.Log(s);
         }
     }

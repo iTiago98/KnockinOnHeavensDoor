@@ -15,7 +15,7 @@ public class SanPedroFile : MonoBehaviour
 
         if(numCensorsUnlocked > 3)
         {
-            MouseController.Instance.sanPedroJudge = true;
+            MouseController.instance.sanPedroJudge = true;
         }
     }
 
