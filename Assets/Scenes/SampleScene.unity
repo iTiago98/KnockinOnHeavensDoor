@@ -314,6 +314,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9449157}
   m_CullTransparentMesh: 1
+--- !u!1 &24391564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 24391565}
+  - component: {fileID: 24391566}
+  m_Layer: 0
+  m_Name: StoryManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &24391565
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24391564}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1601567187}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &24391566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24391564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf578ecbd92c0e645a49b9029923e99c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogues: {fileID: 150110084}
+  optionsPanel: {fileID: 1956093400}
+  nextButton: {fileID: 1509700705}
+  skipDialogueKey: 324
+  characterDelay: 0.02
+  speakerText: {fileID: 2107418497}
+  dialogueText: {fileID: 348989282}
+  optionsTexts:
+  - {fileID: 848019257}
+  - {fileID: 1463707697}
+  - {fileID: 1492561935}
+  sanPedroFile: {fileID: 569339326}
 --- !u!1 &28822422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2834,8 +2890,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 745056771}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+      - m_Target: {fileID: 24391566}
+        m_TargetAssemblyTypeName: StoryManager, Assembly-CSharp
         m_MethodName: SelectOption
         m_Mode: 3
         m_Arguments:
@@ -4019,8 +4075,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 745056771}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+      - m_Target: {fileID: 24391566}
+        m_TargetAssemblyTypeName: StoryManager, Assembly-CSharp
         m_MethodName: SelectOption
         m_Mode: 3
         m_Arguments:
@@ -4252,7 +4308,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &745056771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4260,7 +4316,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745056770}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 016ede0f822d53d4b9f56087a72eaef5, type: 3}
   m_Name: 
@@ -5161,6 +5217,8 @@ MonoBehaviour:
   - Ramonica_Intro
   - Rosa_Intro
   - SanPedro_Intro
+  introJsons:
+  - {fileID: 4900000, guid: eef2607a1c1abed4296b25435ad78414, type: 3}
   interrogationFiles:
   - {fileID: 89031869}
   - {fileID: 717174218}
@@ -5274,8 +5332,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 745056771}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+      - m_Target: {fileID: 24391566}
+        m_TargetAssemblyTypeName: StoryManager, Assembly-CSharp
         m_MethodName: SelectOption
         m_Mode: 3
         m_Arguments:
@@ -8282,10 +8340,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 745056771}
-        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: SelectOption
-        m_Mode: 3
+      - m_Target: {fileID: 24391566}
+        m_TargetAssemblyTypeName: StoryManager, Assembly-CSharp
+        m_MethodName: OnNextButtonClicked
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8466,6 +8524,7 @@ Transform:
   - {fileID: 918300880}
   - {fileID: 745056772}
   - {fileID: 418082215}
+  - {fileID: 24391565}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10368,7 +10427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1956093401
 RectTransform:
   m_ObjectHideFlags: 0

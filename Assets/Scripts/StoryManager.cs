@@ -6,6 +6,8 @@ using Ink.Runtime;
 
 public class StoryManager : MonoBehaviour
 {
+    public static StoryManager ins;
+
     public GameObject dialogues;
     public GameObject optionsPanel;
 
@@ -20,13 +22,23 @@ public class StoryManager : MonoBehaviour
     public SanPedroFile sanPedroFile;
 
     private Story _story;
-    private string _bufferedText;
-    //private bool _typing;
+    private string _bufferedText = "";
+    private bool _typing;
+    private string _line;
 
     private const string PLACEHOLDER_NAME = "Player";
     private const char SPEAKER_NAME_SEPARATOR = ':';
-    private const int CHARACTER_LIMIT = 120;
+    private const int CHARACTER_LIMIT = 200;
 
+    void Awake()
+    {
+        ins = this;
+    }
+
+    void Update()
+    {
+        if(Input.GetKeyDown(skipDialogueKey) && _typing) SkipDialogue();
+    }
 
     public void StartDialogue(TextAsset jsonFile)
     {
@@ -38,6 +50,9 @@ public class StoryManager : MonoBehaviour
     public void SelectOption(int index)
     {
         _story.ChooseChoiceIndex(index);
+        _story.Continue();
+        optionsPanel.SetActive(false);
+        DisplayNextSentence();
     }
 
     public void OnNextButtonClicked()
@@ -48,22 +63,31 @@ public class StoryManager : MonoBehaviour
 
     private void DisplayNextSentence()
     {
-        if (_story.canContinue)
+        if (_story.canContinue || _bufferedText.Length > 0)
         {
-            string line = (_bufferedText.Length > 0) ? _bufferedText : _story.Continue();
-
-            SetSpeakerName(line);
-
-            if (line.Length > CHARACTER_LIMIT)
+            if(_bufferedText.Length > 0)
+                _line = _bufferedText;
+            else
             {
-                line = GetTrimmedLine(line);
+                _line = _story.Continue();
+                _line = SeparateSpeakerName(_line);
+            }
+
+            // _line = (_bufferedText.Length > 0) ? _bufferedText : _story.Continue();
+            
+            // if(_bufferedText.Length == 0) _line = SeparateSpeakerName(_line);
+
+            if (_line.Length > CHARACTER_LIMIT)
+            {
+                _line = GetTrimmedLine(_line);
             }
             else
             {
                 _bufferedText = "";
             }
 
-            dialogueText.text = line;
+            StopAllCoroutines();
+            StartCoroutine(TypeSentence(_line));
         }
         else if (_story.currentChoices.Count > 0)
         {
@@ -94,19 +118,21 @@ public class StoryManager : MonoBehaviour
     }
 
 
-    private void SetSpeakerName(string line)
+    private string SeparateSpeakerName(string line)
     {
         int separatorIndex = line.IndexOf(SPEAKER_NAME_SEPARATOR);
         var speakerName = line.Substring(0, separatorIndex);
 
         speakerText.text = (speakerName == PLACEHOLDER_NAME) ? GameManager.playerName : speakerName;
+        
+        return line.Substring(separatorIndex+1, line.Length-separatorIndex-1);
     }
 
     private string GetTrimmedLine(string line)
     {
         string aux = line.Substring(0, CHARACTER_LIMIT);
-        int separatorIndex = aux.LastIndexOf('.');
-        _bufferedText = line.Substring(separatorIndex, line.Length - 1);
+        int separatorIndex = Mathf.Max(aux.LastIndexOf('.'), aux.LastIndexOf(','), aux.LastIndexOf('?'), aux.LastIndexOf('!'), aux.LastIndexOf(';')) + 1;
+        _bufferedText = line.Substring(separatorIndex, line.Length - separatorIndex);
         return line.Substring(0, separatorIndex);
     }
 
@@ -121,6 +147,14 @@ public class StoryManager : MonoBehaviour
             yield return new WaitForSecondsRealtime(characterDelay);
         }
 
+        EndSentence();
+    }
+
+    private void SkipDialogue()
+    {
+        StopAllCoroutines();
+        dialogueText.text = _line;
+        _typing = false;
         EndSentence();
     }
 

@@ -28,6 +28,7 @@ public class SceneManager : MonoBehaviour
     public List<GameObject> characters;
     public GameObject sanPedroCharacter;
     public List<string> introPaths;
+    public List<TextAsset> introJsons;
     public List<GameObject> interrogationFiles;
 
     [HideInInspector]
@@ -96,6 +97,11 @@ public class SceneManager : MonoBehaviour
     public string GetCurrentIntroPath()
     {
         return introPaths[currentSuspect];
+    }
+
+    public TextAsset GetCurrentIntroJson()
+    {
+        return introJsons[currentSuspect];
     }
 
     public Transform GetInterrogationOptions()
@@ -208,7 +214,7 @@ public class SceneManager : MonoBehaviour
 
     public void StartMusic()
     {
-        if (characters[currentSuspect].GetComponent<Character>().myName == "Ramónica" || characters[currentSuspect].GetComponent<Character>().myName == "Rosa")
+        if (characters[currentSuspect].GetComponent<Character>().myName == "Ramï¿½nica" || characters[currentSuspect].GetComponent<Character>().myName == "Rosa")
         {
             PlayLoop();
         }

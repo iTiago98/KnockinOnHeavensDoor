@@ -17,7 +17,8 @@ public class Fade : MonoBehaviour
         GetComponent<Animator>().Play("Idle");
 
         MenuManager.ins.canPause = true;
-        DialogueManager.ins.StartDialogue(SceneManager.Instance.GetCurrentIntroPath(), SceneManager.Instance.currentSuspect);
+        // DialogueManager.ins.StartDialogue(SceneManager.Instance.GetCurrentIntroPath(), SceneManager.Instance.currentSuspect);
+        StoryManager.ins.StartDialogue(SceneManager.Instance.GetCurrentIntroJson());
     }
 
     public void StartMusic()
