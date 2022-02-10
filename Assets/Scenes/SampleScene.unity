@@ -1271,7 +1271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Text: {fileID: 1479852115}
   myName: "Ram\xF3nica"
-  defaultImage: {fileID: 0}
+  defaultImage: {fileID: 1707524807, guid: 1066dd64afccb4142a824fdfa5673227, type: 3}
   disabledImage: {fileID: -600190614, guid: 1066dd64afccb4142a824fdfa5673227, type: 3}
   highlightColor: {r: 0.8509804, g: 0.8509804, b: 0.8509804, a: 1}
   faceImage: {fileID: 1473714936}
@@ -1342,7 +1342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Text: {fileID: 1081494161}
   myName: Rosa
-  defaultImage: {fileID: 0}
+  defaultImage: {fileID: -650662302, guid: 5f6d96442d9781f4bbc8312a07bd1b07, type: 3}
   disabledImage: {fileID: 1998143540, guid: 5f6d96442d9781f4bbc8312a07bd1b07, type: 3}
   highlightColor: {r: 0.8509804, g: 0.8509804, b: 0.8509804, a: 1}
   faceImage: {fileID: 2106148927}
@@ -1413,7 +1413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Text: {fileID: 1086157765}
   myName: San Pedro
-  defaultImage: {fileID: 0}
+  defaultImage: {fileID: -1950346106, guid: ce8283e1eb06d104092c681a3b295d8e, type: 3}
   disabledImage: {fileID: 1631055235, guid: ce8283e1eb06d104092c681a3b295d8e, type: 3}
   highlightColor: {r: 0.8509804, g: 0.8509804, b: 0.8509804, a: 1}
   faceImage: {fileID: 136932447}
@@ -2216,7 +2216,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Text: {fileID: 2058416899}
   myName: Arturo
-  defaultImage: {fileID: 0}
+  defaultImage: {fileID: 1959371344, guid: d4bfe8e668769fd4f99720301c43a60f, type: 3}
   disabledImage: {fileID: 1883427849, guid: d4bfe8e668769fd4f99720301c43a60f, type: 3}
   highlightColor: {r: 0.8509804, g: 0.8509804, b: 0.8509804, a: 1}
   faceImage: {fileID: 855687494}
@@ -2547,7 +2547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Text: {fileID: 1802779193}
   myName: Fulgencio
-  defaultImage: {fileID: 0}
+  defaultImage: {fileID: 549698165, guid: d4bfe8e668769fd4f99720301c43a60f, type: 3}
   disabledImage: {fileID: -1466408641, guid: d4bfe8e668769fd4f99720301c43a60f, type: 3}
   highlightColor: {r: 0.8509804, g: 0.8509804, b: 0.8509804, a: 1}
   faceImage: {fileID: 1940254442}
@@ -2693,7 +2693,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Text: {fileID: 1029150998}
   myName: San Pedro
-  defaultImage: {fileID: 0}
+  defaultImage: {fileID: -1950346106, guid: ce8283e1eb06d104092c681a3b295d8e, type: 3}
   disabledImage: {fileID: 1631055235, guid: ce8283e1eb06d104092c681a3b295d8e, type: 3}
   highlightColor: {r: 0.8509804, g: 0.8509804, b: 0.8509804, a: 1}
   faceImage: {fileID: 9449159}
@@ -4872,7 +4872,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1086157766
 RectTransform:
   m_ObjectHideFlags: 0
