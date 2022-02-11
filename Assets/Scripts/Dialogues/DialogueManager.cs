@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogueManager : MonoBehaviour
+public class DialogueManager2 : MonoBehaviour
 {
-    public static DialogueManager ins;
+    /*public static DialogueManager ins;
 
     public SanPedroFile sanPedroFile;
     public GameObject dialogueBox;
@@ -116,9 +116,9 @@ public class DialogueManager : MonoBehaviour
     {
         log[_logIndex] += "\n----------------------------\n\n";
         dialogueBox.SetActive(false);
-        MouseController.Instance.enable = true;
-        SceneManager.Instance.ColorAll();
-        if (_dialoguePath.Contains("Intro") && SceneManager.Instance.currentSuspect != 3) SceneManager.Instance.HideSanPedro();
+        MouseController.instance.enable = true;
+        SceneManager.instance.ColorAll();
+        if (_dialoguePath.Contains("Intro") && SceneManager.instance.currentSuspect != 3) SceneManager.instance.HideSanPedro();
     }
 
     public void SelectOption(int i)
@@ -131,7 +131,7 @@ public class DialogueManager : MonoBehaviour
 
     private void SetCharacterSpeaking(string speakerName)
     {
-        SceneManager.Instance.GreyCharacters();
+        SceneManager.instance.GreyCharacters();
         switch(speakerName)
         {
             case "Fulgencio":
@@ -139,7 +139,7 @@ public class DialogueManager : MonoBehaviour
             case "Ramónica":
             case "Rosa":
             case "San Pedro":
-                SceneManager.Instance.Color(speakerName);
+                SceneManager.instance.Color(speakerName);
                 break;
         }
     }
@@ -152,5 +152,5 @@ public class DialogueManager : MonoBehaviour
             npcText.text = _dialogueTree.getTextNPC();
             EndNPCSentence();
         }
-    }
+    }*/
 }

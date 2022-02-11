@@ -7,32 +7,26 @@ public class Fade : MonoBehaviour
 
     public void ReloadScene()
     {
-        SceneManager.Instance.HideSanPedro();
-        SceneManager.Instance.ReloadScene();
+        MySceneManager.instance.ReloadScene();
     }
 
     public void ResetPlayMode()
     {
-        MouseController.Instance.SetStateSelecting();
-        GetComponent<Animator>().Play("Idle");
-
-        MenuManager.ins.canPause = true;
-        // DialogueManager.ins.StartDialogue(SceneManager.Instance.GetCurrentIntroPath(), SceneManager.Instance.currentSuspect);
-        StoryManager.ins.StartDialogue(SceneManager.Instance.GetCurrentIntroJson());
+        MySceneManager.instance.ResetPlayMode();
     }
 
     public void StartMusic()
     {
-        SceneManager.Instance.StartMusic();
+        MySceneManager.instance.StartMusic();
     }
 
     public void StopMusic()
     {
-        SceneManager.Instance.StopPreviousMusic();
+        MySceneManager.instance.StopMusic();
     }
 
     public void HideMainMenu()
     {
-        SceneManager.Instance.HideMainMenu();
+        MySceneManager.instance.HideMainMenu();
     }
 }

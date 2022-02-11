@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class Stamp : ClickableObject
 {
-    public enum StampType
-    {
-        HEAVEN, HELL
-    }
-
     public StampType type;
     public GameObject sealImage;
 
@@ -21,28 +16,25 @@ public class Stamp : ClickableObject
 
     public override void OnMouseClick()
     {
-        MenuManager.ins.canPause = false;
-        MouseController.Instance.SetStateStamping();
-        SceneManager.Instance.StopMusic();
+        base.OnMouseClick();
+        MySceneManager.instance.Stamp(type);
+        
         if (type == StampType.HEAVEN)
         {
-            SceneManager.Instance.PlayHeavenSound();
             _anim.Play("SealHeaven");
         }
         else
         {
-            SceneManager.Instance.PlayHellSound();
             _anim.Play("SealHell");
         }
     }
-
 
     public void ShowSeal()
     {
         var rotationZ = Random.Range(-25f, 25f);
         sealImage.transform.rotation = Quaternion.Euler(0, 0, rotationZ);
         sealImage.SetActive(true);
-        MouseController.Instance.SetStateStamped();
+        MouseController.instance.SetStateStamped();
     }
 
     public override void OnMouseHoverEnter()
