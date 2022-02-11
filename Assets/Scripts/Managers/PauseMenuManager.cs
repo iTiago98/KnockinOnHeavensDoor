@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-public class MenuManager : MonoBehaviour
+public class PauseMenuManager : MonoBehaviour
 {
-    public static MenuManager instance;
+    public static PauseMenuManager instance;
 
     public KeyCode pauseKey;
     public GameObject pauseScreen;
@@ -47,7 +47,7 @@ public class MenuManager : MonoBehaviour
 
     public void RestartGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        SceneManager.LoadScene(0);
     }
 
     public void CloseApplication()

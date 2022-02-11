@@ -19,8 +19,8 @@ public class Character : ClickableObject
         base.OnMouseClick();
         if (transform.name == "San Pedro Side")
         {
-            SceneManager.instance.StopMusic();
-            SceneManager.instance.FadeOut();
+            MySceneManager.instance.StopMusic();
+            MySceneManager.instance.PlayFadeAnimation();
         }
         else
         {

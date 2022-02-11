@@ -17,7 +17,7 @@ public class Stamp : ClickableObject
     public override void OnMouseClick()
     {
         base.OnMouseClick();
-        SceneManager.instance.Stamp(type);
+        MySceneManager.instance.Stamp(type);
         
         if (type == StampType.HEAVEN)
         {

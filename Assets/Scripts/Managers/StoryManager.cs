@@ -37,7 +37,7 @@ public class StoryManager : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(skipDialogueKey) && _typing) SkipDialogue();
+        if (Input.GetKeyDown(skipDialogueKey) && _typing) SkipDialogue();
     }
 
     public void StartDialogue(TextAsset jsonFile)
@@ -65,7 +65,7 @@ public class StoryManager : MonoBehaviour
     {
         if (_story.canContinue || _bufferedText.Length > 0)
         {
-            if(_bufferedText.Length > 0)
+            if (_bufferedText.Length > 0)
                 _line = _bufferedText;
             else
             {
@@ -74,7 +74,7 @@ public class StoryManager : MonoBehaviour
             }
 
             // _line = (_bufferedText.Length > 0) ? _bufferedText : _story.Continue();
-            
+
             // if(_bufferedText.Length == 0) _line = SeparateSpeakerName(_line);
 
             if (_line.Length > CHARACTER_LIMIT)
@@ -115,6 +115,8 @@ public class StoryManager : MonoBehaviour
     private void EndDialogue()
     {
         dialogues.SetActive(false);
+        MouseController.instance.enable = true;
+        CharacterManager.instance.AllCharactersDefault();
     }
 
 
@@ -124,8 +126,8 @@ public class StoryManager : MonoBehaviour
         var speakerName = line.Substring(0, separatorIndex);
 
         speakerText.text = (speakerName == PLACEHOLDER_NAME) ? GameManager.playerName : speakerName;
-        
-        return line.Substring(separatorIndex+1, line.Length-separatorIndex-1);
+
+        return line.Substring(separatorIndex + 1, line.Length - separatorIndex - 1);
     }
 
     private string GetTrimmedLine(string line)
@@ -150,12 +152,15 @@ public class StoryManager : MonoBehaviour
         EndSentence();
     }
 
-    private void SkipDialogue()
+    public void SkipDialogue()
     {
-        StopAllCoroutines();
-        dialogueText.text = _line;
-        _typing = false;
-        EndSentence();
+        if (_typing)
+        {
+            StopAllCoroutines();
+            dialogueText.text = _line;
+            _typing = false;
+            EndSentence();
+        }
     }
 
     private void EndSentence()

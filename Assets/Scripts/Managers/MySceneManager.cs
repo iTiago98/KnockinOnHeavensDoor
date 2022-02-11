@@ -3,16 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SceneManager : MonoBehaviour
+public class MySceneManager : MonoBehaviour
 {
-    public static SceneManager instance;
-
-    public GameObject mainMenu;
-    public Button startButton;
-    public InputField inputField;
-    public GameObject fade;
+    public static MySceneManager instance;
    
-    public List<string> introPaths;
     public List<GameObject> interrogationFiles;
 
     [HideInInspector]
@@ -25,6 +19,8 @@ public class SceneManager : MonoBehaviour
 
     public GameObject heavenImage;
     public GameObject hellImage;
+    public GameObject fadeImage;
+    public GameObject endImage;
 
     private void Awake()
     {
@@ -39,9 +35,8 @@ public class SceneManager : MonoBehaviour
 
     public void LoadScene()
     {
-        GameManager.playerName = inputField.text;
-        inputField.gameObject.SetActive(false);
-        fade.GetComponent<Animator>().Play("FadeOut");
+        MainMenuManager.instance.LoadScene();
+        PlayFadeAnimation();
     }
 
     public void ReloadScene()
@@ -70,11 +65,6 @@ public class SceneManager : MonoBehaviour
         return DialogueManager.instance.introFiles[currentSuspect];
     }
 
-    public Transform GetInterrogationOptions()
-    {
-        return interrogationFiles[currentSuspect].transform.Find("Options").transform;
-    }
-
     private void ResetStamps()
     {
         heavenStamp.GetComponent<Animator>().Play("Idle");
@@ -84,25 +74,11 @@ public class SceneManager : MonoBehaviour
         hellImage.SetActive(false);
     }
 
-    public Transform GetFafita()
-    {
-        return fafita;
-    }
-    public void PlayHeavenSound()
-    {
-        MusicManager.instance.PlayStampSound(StampType.HEAVEN);
-    }
-    public void PlayHellSound()
-    {
-        MusicManager.instance.PlayStampSound(StampType.HELL);
-    }
-
     public void ResetPlayMode()
     {
         MouseController.instance.SetState(GameState.SELECTING);
-        fade.GetComponent<Animator>().Play("Idle");
-        MenuManager.instance.canPause = true;
-        //DialogueManager.instance.StartDialogue(GetCurrentIntroPath(), currentSuspect);
+        fadeImage.GetComponent<Animator>().Play("Idle");
+        PauseMenuManager.instance.canPause = true;
         StoryManager.ins.StartDialogue(GetCurrentIntroPath());
     }
 
@@ -118,26 +94,25 @@ public class SceneManager : MonoBehaviour
 
     public void Stamp(StampType type)
     {
-        MenuManager.instance.canPause = false;
+        PauseMenuManager.instance.canPause = false;
         MouseController.instance.SetState(GameState.STAMPING);
         StopMusic();
         MusicManager.instance.PlayStampSound(type);
     }
 
-    public void ShowInputText()
-    {
-        startButton.gameObject.SetActive(false);
-        inputField.gameObject.SetActive(true);
-    }
-
     public void HideMainMenu()
     {
-        mainMenu.SetActive(false);
+        MainMenuManager.instance.Hide();
     }
 
-    public void FadeOut()
+    public void PlayFadeAnimation()
     {
-        fade.GetComponent<Animator>().Play("FadeOut");
+        fadeImage.GetComponent<Animator>().Play("FadeOut");
+    }
+
+    public void PlayEndAnimation()
+    {
+        endImage.GetComponent<Animator>().Play("End");
     }
 
     public bool IsLastCharacter()

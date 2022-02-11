@@ -7,26 +7,26 @@ public class Fade : MonoBehaviour
 
     public void ReloadScene()
     {
-        SceneManager.instance.ReloadScene();
+        MySceneManager.instance.ReloadScene();
     }
 
     public void ResetPlayMode()
     {
-        SceneManager.instance.ResetPlayMode();
+        MySceneManager.instance.ResetPlayMode();
     }
 
     public void StartMusic()
     {
-        SceneManager.instance.StartMusic();
+        MySceneManager.instance.StartMusic();
     }
 
     public void StopMusic()
     {
-        SceneManager.instance.StopMusic();
+        MySceneManager.instance.StopMusic();
     }
 
     public void HideMainMenu()
     {
-        SceneManager.instance.HideMainMenu();
+        MySceneManager.instance.HideMainMenu();
     }
 }

@@ -11,6 +11,8 @@ public class MusicManager : MonoBehaviour
     public GameObject hellSound;
 
     public GameObject menuSong;
+    public GameObject endSong;
+
     public List<GameObject> songs;
 
     private void Awake()
@@ -21,6 +23,11 @@ public class MusicManager : MonoBehaviour
     public void PlayMenuSong()
     {
         menuSong.SetActive(true);
+    }
+
+    public void PlayEndSong()
+    {
+        endSong.SetActive(true);
     }
 
     public void PlayCharacterSong(int characterIndex)

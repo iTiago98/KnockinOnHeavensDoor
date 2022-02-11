@@ -6,14 +6,13 @@ public class MouseController : MonoBehaviour
 {
     public static MouseController instance;
 
-    public List<Transform> clickableObjects;
-    public GameObject fadeImage;
-    public GameObject endImage;
+    //public GameObject clickableObjects;
 
+    [HideInInspector]
     public bool enable = false;
     public bool sanPedroJudge = false;
-    public AudioSource endMusic;
-    
+
+    //private List<Transform> _clickableObjects;
 
     private GameState _state = GameState.SELECTING;
 
@@ -25,6 +24,14 @@ public class MouseController : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+        //for (int i = 0; i < clickableObjects.transform.childCount; i++)
+        //{
+        //    _clickableObjects.Add(clickableObjects.transform.GetChild(i));
+        //}
+    }
+
     void Update()
     {
         if (!enable) return;
@@ -33,12 +40,12 @@ public class MouseController : MonoBehaviour
 
         CheckHovering(clickableObject);
         CheckClick(clickableObject);
-
     }
 
     private ClickableObject GetRaycastObject()
     {
-        var ray = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+        //var ray = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>().ScreenPointToRay(Input.mousePosition);
+        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         var rayResult = Physics.Raycast(ray, out hit);
 
@@ -98,16 +105,15 @@ public class MouseController : MonoBehaviour
                         CheckObjectUp(null);
                         break;
                     case GameState.STAMPED:
-                        if (SceneManager.instance.IsLastCharacter())
+                        enable = false;
+                        if (MySceneManager.instance.IsLastCharacter())
                         {
-                            endImage.GetComponent<Animator>().Play("End");
-                            enable = false;
-                            endMusic.Play();
+                            MySceneManager.instance.PlayEndAnimation();
+                            MusicManager.instance.PlayEndSong();
                         }
                         else
                         {
-                            fadeImage.GetComponent<Animator>().Play("FadeOut");
-                            enable = false;
+                            MySceneManager.instance.PlayFadeAnimation();
                         }
                         break;
                 }
@@ -128,7 +134,7 @@ public class MouseController : MonoBehaviour
                 }
                 else
                 {
-                    bool hellStampAvailable = (sanPedroJudge || !SceneManager.instance.IsSanPedro()) && o.CompareTag("HellStamp");
+                    bool hellStampAvailable = (sanPedroJudge || !MySceneManager.instance.IsSanPedro()) && o.CompareTag("HellStamp");
                     return o.CompareTag("InterrogationFile") || o.CompareTag("Fafita") || o.CompareTag("HeavenStamp") || hellStampAvailable;
                 }
                 break;
@@ -142,7 +148,7 @@ public class MouseController : MonoBehaviour
     }
     public void OnInterrogationFileClick()
     {
-        SceneManager.instance.GetCurrentFile().OnMouseClick();
+        MySceneManager.instance.GetCurrentFile().OnMouseClick();
     }
 
     public void SetState(GameState state)

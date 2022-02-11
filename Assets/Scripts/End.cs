@@ -6,7 +6,7 @@ public class End : MonoBehaviour
 {
     public void ShowPauseMenu()
     {
-        MenuManager.instance.canPause = true;
-        MenuManager.instance.ShowFinalMenu();
+        PauseMenuManager.instance.canPause = true;
+        PauseMenuManager.instance.ShowFinalMenu();
     }
 }
